@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: a9e3896100858d841932f7c80e313893, type: 2}
-  playerDamageFonctionName: TakeDamage
+  playerDamageFonctionName: HurtPlayer
+  attackCouldown: 0
 --- !u!54 &1638765889
 Rigidbody:
   m_ObjectHideFlags: 0

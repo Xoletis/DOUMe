@@ -16,6 +16,7 @@ public class EnnemieAi : MonoBehaviour
     [Tooltip("fonction à appeler pour fair des dégats au joueur")]
     public string playerDamageFonctionName;
     //couldown de l'attaque
+    [SerializeField]
     float attackCouldown;
 
     void Start()
@@ -24,7 +25,7 @@ public class EnnemieAi : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         agent.speed = data.speed;
-        attackCouldown = 0.0f;
+        attackCouldown = data.attackCouldown;
     }
 
     void Update()

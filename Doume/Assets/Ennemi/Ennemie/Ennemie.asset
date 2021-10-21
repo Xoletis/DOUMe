@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b0fa6cc11389b46b3b0b2ba966e83c, type: 3}
   m_Name: Ennemie
   m_EditorClassIdentifier: 
-  name: Ennemie
+  nom: Ennemie
   health: 2
-  damage: 3
+  damage: 2
   speed: 5
   viewArea: 100
   attackRange: 6
-  attackCouldown: 2
+  attackCouldown: 5
