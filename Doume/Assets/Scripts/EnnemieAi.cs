@@ -18,6 +18,8 @@ public class EnnemieAi : MonoBehaviour
     //couldown de l'attaque
     [SerializeField]
     float attackCouldown;
+    [SerializeField]
+    private float health;
 
     void Start()
     {
@@ -25,6 +27,7 @@ public class EnnemieAi : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         agent.speed = data.speed;
+        health = data.health;
         attackCouldown = data.attackCouldown;
     }
 
@@ -89,6 +92,12 @@ public class EnnemieAi : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        health -= damage;
         Debug.Log("Vous avvez donner " + damage + " dégat à " + this.name);
+        if(health <= 0)
+        {
+            Debug.Log(gameObject.name + " est mort");
+            Destroy(gameObject);
+        }
     }
 }
