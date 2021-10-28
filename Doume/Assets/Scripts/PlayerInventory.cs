@@ -10,17 +10,49 @@ public class PlayerInventory : MonoBehaviour
 
     public WeaponStats[] allWeapons;
     private WeaponStats weapon;
+    private int i = 0;
 
     [SerializeField]
     private int weaponReloaderLeft;
 
+    private GunController gunController;
+
+    private void Awake()
+    {
+        for (int i = 0; i < allWeapons.Length; i++)
+        {
+            allWeapons[i].munitions = allWeapons[i].maxMunitions;
+        }
+
+        weapon = allWeapons[0];
+        weaponReloaderLeft = 5;
+        health = maxHealth;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        health = maxHealth;
         armor = 0;
-        weapon = allWeapons[0];
-        weaponReloaderLeft = 5;
+
+        gunController = gameObject.GetComponent<GunController>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown("a"))
+        {
+            i--;
+            if (i < 0) i = allWeapons.Length - 1;
+            weapon = allWeapons[i];
+            gunController.changeWeapon();
+        }
+        if (Input.GetKeyDown("e"))
+        {
+            i++;
+            if (i >= allWeapons.Length) i = 0;
+            weapon = allWeapons[i];
+            gunController.changeWeapon();
+        }
     }
 
     // Getter des variables

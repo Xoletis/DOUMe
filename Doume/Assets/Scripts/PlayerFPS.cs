@@ -40,60 +40,62 @@ public class PlayerFPS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Calcule les directions
-        //forward = avant/arrière
-        //right = droite/gauche
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
-
-        //Est-ce qu'on appuie sur un bouton de direction ?
-
-        // Z = axe arrière/avant
-        float speedZ = Input.GetAxis("Vertical");
-
-        // X = axe gauche/droite
-        float speedX = Input.GetAxis("Horizontal");
-
-        // Y = axe haut/bas
-        float speedY = moveDirection.y;
-
-
-        //Est-ce qu'on appuie sur le bouton pour courir (ici : Shift Gauche) ?
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (characterController.isGrounded)
         {
-            //En train de courir
-            isRunning = true;
+            //Calcule les directions
+            //forward = avant/arrière
+            //right = droite/gauche
+            Vector3 forward = transform.TransformDirection(Vector3.forward);
+            Vector3 right = transform.TransformDirection(Vector3.right);
+
+            //Est-ce qu'on appuie sur un bouton de direction ?
+
+            // Z = axe arrière/avant
+            float speedZ = Input.GetAxis("Vertical");
+
+            // X = axe gauche/droite
+            float speedX = Input.GetAxis("Horizontal");
+
+            // Y = axe haut/bas
+            float speedY = moveDirection.y;
+
+
+            //Est-ce qu'on appuie sur le bouton pour courir (ici : Shift Gauche) ?
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                //En train de courir
+                isRunning = true;
+            }
+            else
+            {
+                //En train de marcher
+                isRunning = false;
+            }
+
+            // Est-ce que l'on court ?
+            if (isRunning)
+            {
+                //Multiplie la vitesse par la vitesse de course
+                speedX = speedX * runningSpeed;
+                speedZ = speedZ * runningSpeed;
+            }
+            else
+            {
+                //Multiplie la vitesse par la vitesse de marche
+                speedX = speedX * walkingSpeed;
+                speedZ = speedZ * walkingSpeed;
+            }
+
+
+
+            //Calcul du mouvement
+            //forward = axe arrière/avant
+            //right = axe gauche/droite
+            moveDirection = forward * speedZ + right * speedX;
+
         }
-        else
-        {
-            //En train de marcher
-            isRunning = false;
-        }
-
-        // Est-ce que l'on court ?
-        if (isRunning)
-        {
-            //Multiplie la vitesse par la vitesse de course
-            speedX = speedX * runningSpeed;
-            speedZ = speedZ * runningSpeed;
-        }
-        else
-        {
-            //Multiplie la vitesse par la vitesse de marche
-            speedX = speedX * walkingSpeed;
-            speedZ = speedZ * walkingSpeed;
-        }
-
-
-
-        //Calcul du mouvement
-        //forward = axe arrière/avant
-        //right = axe gauche/droite
-        moveDirection = forward * speedZ + right * speedX;
-
-
         //Si le joueur ne touche pas le sol
-        if (!characterController.isGrounded)
+        else
         {
             //Applique la gravité * deltaTime
             //Time.deltaTime = Temps écoulé depuis la dernière frame
@@ -125,10 +127,5 @@ public class PlayerFPS : MonoBehaviour
         //Input.GetAxis("Mouse X") = mouvement de la souris gauche/droite
         //Applique la rotation gauche/droite sur le Player
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * rotationSpeed, 0);
-    }
-
-    public void TakeDamage(int damage)
-    {
-
     }
 }

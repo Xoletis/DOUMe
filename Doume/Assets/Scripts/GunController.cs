@@ -2,17 +2,8 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
-    //Dommage que le Gun inflige
-    public int gunDamage = 1;
-
-    //Portée du tir
-    public float weaponRange = 200f;
-
     //La caméra
     private Camera fpsCam;
-
-    //Temps entre chaque tir (en secondes) 
-    public float fireRate = 0.25f;
 
     //Float : mémorise le temps du prochain tir possible
     private float nextFire;
@@ -20,12 +11,11 @@ public class GunController : MonoBehaviour
     //Détermine sur quel Layer on peut tirer
     public LayerMask layerMask;
 
-    [SerializeField]
-    private int ammo;
-    private int maxAmmo;
-
     private PlayerInventory inventory;
+    [SerializeField]
     private WeaponStats weapon;
+
+    public string enemieDamageFunction;
 
     void Start()
     {
@@ -33,11 +23,6 @@ public class GunController : MonoBehaviour
         inventory = GetComponent<PlayerInventory>();
 
         weapon = inventory.GetWeapon();
-        gunDamage = weapon.wpnDmg;
-        weaponRange = weapon.wpnRange;
-        fireRate = weapon.fireRate;
-        ammo = weapon.maxMunitions;
-        maxAmmo = weapon.maxMunitions;
     }
 
     // Update is called once per frame
@@ -48,17 +33,23 @@ public class GunController : MonoBehaviour
             ReloadAmmo();
         }
 
+        
+        if (Input.GetButtonDown("Fire1") && Time.time > nextFire && weapon.munitions == 0)
+        {
+            Debug.Log("Pas de munitions");
+
+        }
+
         // Vérifie si le joueur a pressé le bouton pour faire feu (bouton gauche de la souris)
         // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFire && ammo > 0)
-        {
-            //Nouveau tir
-            ammo -= 1;
+        if (Input.GetButtonDown("Fire1") && Time.time > nextFire && weapon.munitions > 0) {
+
+            weapon.munitions--;
 
             //Met à jour le temps pour le prochain tir
             //Time.time = Temps écoulé depuis le lancement du jeu
             //temps du prochain tir = temps total écoulé + temps qu'il faut attendre
-            nextFire = Time.time + fireRate;
+            nextFire = Time.time + weapon.fireRate;
 
             //On va lancer un rayon invisible qui simulera les balles du gun
 
@@ -70,14 +61,14 @@ public class GunController : MonoBehaviour
 
 
             // Vérifie si le raycast a touché quelque chose
-            if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange, layerMask))
+            if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weapon.wpnRange, layerMask))
             {
                 Debug.Log("Ennemi Touché !");
                 // Vérifie si la cible a un RigidBody attaché
                 if (hit.rigidbody != null)
                 {
                     //S'assure que la cible touchée a un composant ReceiveAction
-                    hit.collider.gameObject.SendMessage("TakeDamage", weapon.wpnDmg);
+                    hit.collider.gameObject.SendMessage(enemieDamageFunction, weapon.wpnDmg);
                 }
             }
         }
@@ -85,10 +76,21 @@ public class GunController : MonoBehaviour
 
     private void ReloadAmmo()
     {
-        if (inventory.GetWeaponReloaderLeft() > 0)
+        if (inventory.GetWeaponReloaderLeft() > 0 && weapon.munitions != weapon.maxMunitions)
         {
-            ammo = maxAmmo;
+            weapon.munitions = weapon.maxMunitions;
             inventory.AddReloader(-1);
+            Debug.Log("munitions remplies !");
         }
+        else
+        {
+            Debug.Log("Echec du rechargement de munitions");
+        }
+    }
+
+    public void changeWeapon()
+    {
+        weapon = inventory.GetWeapon();
+        Debug.Log("Changement d'arme pour : " + weapon.name);
     }
 }
