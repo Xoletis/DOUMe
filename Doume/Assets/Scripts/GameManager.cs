@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(nameOfScoreScene);
             }
 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.O))
             {
                 SceneManager.LoadScene(nameOfScoreScene);
             }
