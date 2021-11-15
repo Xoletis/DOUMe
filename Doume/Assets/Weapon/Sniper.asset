@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wpnDmg: 100
   fireRate: 1
-  wpnRange: 500
-  munitions: 0
+  wpnRange: 50
+  munitions: 5
   maxMunitions: 5
+  Image: {fileID: -2228459967888705166, guid: d253c902daf15624bad45e8d9d4012b8, type: 3}

@@ -11,4 +11,5 @@ public class WeaponStats : ScriptableObject
     public float wpnRange = 200f;
     public int munitions = 0;
     public int maxMunitions = 50;
+    public Sprite Image;
 }

@@ -17,24 +17,30 @@ public class GunController : MonoBehaviour
 
     public string enemieDamageFunction;
 
+    public UnityEngine.UI.Image weaponImage;
+    public UnityEngine.UI.Text ammoText;
+
     void Start()
     {
         fpsCam = GetComponentInChildren<Camera>();
         inventory = GetComponent<PlayerInventory>();
 
         weapon = inventory.GetWeapon();
+        weaponImage.sprite = weapon.Image;
     }
 
     // Update is called once per frame
     void Update()
     {
+        ammoText.text = weapon.munitions + "";
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             ReloadAmmo();
         }
 
         
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFire && weapon.munitions == 0)
+        if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions == 0)
         {
             Debug.Log("Pas de munitions");
 
@@ -42,7 +48,7 @@ public class GunController : MonoBehaviour
 
         // Vérifie si le joueur a pressé le bouton pour faire feu (bouton gauche de la souris)
         // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFire && weapon.munitions > 0) {
+        if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0) {
 
             weapon.munitions--;
 
@@ -92,5 +98,6 @@ public class GunController : MonoBehaviour
     {
         weapon = inventory.GetWeapon();
         Debug.Log("Changement d'arme pour : " + weapon.name);
+        weaponImage.sprite = weapon.Image;
     }
 }

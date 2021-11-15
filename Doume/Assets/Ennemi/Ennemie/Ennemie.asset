@@ -18,4 +18,4 @@ MonoBehaviour:
   speed: 5
   viewArea: 100
   attackRange: 6
-  attackCouldown: 5
+  attackCouldown: 1

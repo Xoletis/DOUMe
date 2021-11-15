@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
+    [SerializeField]
     private int health;
+    [SerializeField]
     private int armor;
 
     public int maxHealth = 100;
@@ -16,6 +19,9 @@ public class PlayerInventory : MonoBehaviour
     private int weaponReloaderLeft;
 
     private GunController gunController;
+
+    public Text textVie;
+    public Text textArmor;
 
     private void Awake()
     {
@@ -35,18 +41,20 @@ public class PlayerInventory : MonoBehaviour
         armor = 0;
 
         gunController = gameObject.GetComponent<GunController>();
+        textVie.text = (health * 100) / maxHealth + "%";
+        textArmor.text = (armor * 100) / maxArmor + "%";
     }
 
     void Update()
     {
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKeyDown("a") || Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             i--;
             if (i < 0) i = allWeapons.Length - 1;
             weapon = allWeapons[i];
             gunController.changeWeapon();
         }
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("e") || Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             i++;
             if (i >= allWeapons.Length) i = 0;
@@ -84,6 +92,8 @@ public class PlayerInventory : MonoBehaviour
             health -= (damage - armor);
             armor = 0;
         }
+        textVie.text = (health * 100) / maxHealth + "%";
+        textArmor.text = (armor * 100) / maxArmor + "%";
     }
 
     // Le joueur est-il mort ?

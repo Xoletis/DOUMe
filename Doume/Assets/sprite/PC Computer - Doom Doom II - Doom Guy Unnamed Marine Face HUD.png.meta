@@ -1,0 +1,1112 @@
+fileFormatVersion: 2
+guid: 779f83cf8f19c144cb0c407f418c9cbc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7790493148561523345
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_0
+  - first:
+      213: -6449532458304433747
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_1
+  - first:
+      213: -3116053364548470184
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_2
+  - first:
+      213: 3694743014029609386
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_3
+  - first:
+      213: 9026535118402155681
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_4
+  - first:
+      213: -8492934775940310225
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_5
+  - first:
+      213: 2967236214222964965
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_6
+  - first:
+      213: -5064513969303110984
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_7
+  - first:
+      213: -3010130630127920333
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_8
+  - first:
+      213: 4005846268213258890
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_9
+  - first:
+      213: -8687679058699392443
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_10
+  - first:
+      213: -7059034128570830132
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_11
+  - first:
+      213: 52070224141140722
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_12
+  - first:
+      213: 6216758131477842870
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_13
+  - first:
+      213: -3613946280970013425
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_14
+  - first:
+      213: 3236625241386005793
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_15
+  - first:
+      213: 8868441208964154891
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_16
+  - first:
+      213: 5572320242083736391
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_17
+  - first:
+      213: 8944093447455867472
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_18
+  - first:
+      213: 6680505599771769867
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_19
+  - first:
+      213: 3610839439422916308
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_20
+  - first:
+      213: 2977613988396530805
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_21
+  - first:
+      213: -4244151635530715058
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_22
+  - first:
+      213: 781040785713436387
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_23
+  - first:
+      213: 8562429316004153451
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_24
+  - first:
+      213: 614402085890816706
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_25
+  - first:
+      213: 1342975122247672524
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_26
+  - first:
+      213: -3792113128934347404
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_27
+  - first:
+      213: -7998252574099665087
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_28
+  - first:
+      213: 7127496536409027692
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_29
+  - first:
+      213: -1033814013732593876
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_30
+  - first:
+      213: -2620851222663594661
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_31
+  - first:
+      213: 327238490489310578
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_32
+  - first:
+      213: 967615797169991146
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_33
+  - first:
+      213: 8397909098162958234
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_34
+  - first:
+      213: -6480743188559534081
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_35
+  - first:
+      213: 3827106143103215859
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_36
+  - first:
+      213: -7935439090909395324
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_37
+  - first:
+      213: 4372785322502850715
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_38
+  - first:
+      213: -1813667181765723096
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_39
+  - first:
+      213: -4601657420875048308
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_40
+  - first:
+      213: 6702230212831243429
+    second: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_41
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 337
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d30e6d1cb92e390800000000000000
+      internalID: -7790493148561523345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 337
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da199677668ae76a0800000000000000
+      internalID: -6449532458304433747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 337
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a7de879fd81c4d0800000000000000
+      internalID: -3116053364548470184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_3
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 306
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa94797123d564330800000000000000
+      internalID: 3694743014029609386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_4
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 306
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4f2f49dd1b44d70800000000000000
+      internalID: 9026535118402155681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 306
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b148b91d8032a80800000000000000
+      internalID: -8492934775940310225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 274
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e84f61ad9dbd2920800000000000000
+      internalID: 2967236214222964965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_7
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 274
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba3fabb06b37b9b0800000000000000
+      internalID: -5064513969303110984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_8
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 274
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33bd3b7e32ed936d0800000000000000
+      internalID: -3010130630127920333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 241
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8aeca105ff979730800000000000000
+      internalID: 4005846268213258890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_10
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 241
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a6f97ece92f6780800000000000000
+      internalID: -8687679058699392443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_11
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 241
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc23d254cd5490e90800000000000000
+      internalID: -7059034128570830132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 208
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2ce4dc79df8b000800000000000000
+      internalID: 52070224141140722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_13
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 208
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb0241359c564650800000000000000
+      internalID: 6216758131477842870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_14
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 208
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f053075410fa8ddc0800000000000000
+      internalID: -3613946280970013425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_15
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 176
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12530e7328dcaec20800000000000000
+      internalID: 3236625241386005793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 176
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b068eb3ea48031b70800000000000000
+      internalID: 8868441208964154891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_17
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 176
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bae1c9cbbd45d40800000000000000
+      internalID: 5572320242083736391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_18
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 176
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05281854a9dcf1c70800000000000000
+      internalID: 8944093447455867472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_19
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 176
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c776ab27ce5bc50800000000000000
+      internalID: 6680505599771769867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_20
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 144
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d606cfc6574c1230800000000000000
+      internalID: 3610839439422916308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_21
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 144
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cfb98752c925920800000000000000
+      internalID: 2977613988396530805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_22
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 144
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e407c4fe29eb915c0800000000000000
+      internalID: -4244151635530715058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_23
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 143
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e69a8bd470d6da00800000000000000
+      internalID: 781040785713436387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_24
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 143
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6881d2e81cd3d670800000000000000
+      internalID: 8562429316004153451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_25
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 111
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2caf7ce117bc68800800000000000000
+      internalID: 614402085890816706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_26
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 111
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc262cf12c433a210800000000000000
+      internalID: 1342975122247672524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_27
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 111
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47de5c16335bf5bc0800000000000000
+      internalID: -3792113128934347404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_28
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 111
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f8fe019af700190800000000000000
+      internalID: -7998252574099665087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_29
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 111
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64bc763654f9e260800000000000000
+      internalID: 7127496536409027692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_30
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 78
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2fd5a3c1a727a1f0800000000000000
+      internalID: -1033814013732593876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_31
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 78
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5dfcf7e2bdd0abd0800000000000000
+      internalID: -2620851222663594661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_32
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 78
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d437e5ca59a8400800000000000000
+      internalID: 327238490489310578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_33
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 78
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedaf5dd079ad6d00800000000000000
+      internalID: 967615797169991146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_34
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 78
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f260ca4dd5b8470800000000000000
+      internalID: 8397909098162958234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_35
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 46
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7606d0866cf06a0800000000000000
+      internalID: -6480743188559534081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_36
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 46
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8e161a2cc9c1530800000000000000
+      internalID: 3827106143103215859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_37
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 46
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486c899c038afd190800000000000000
+      internalID: -7935439090909395324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_38
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 46
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9803d235114fac30800000000000000
+      internalID: 4372785322502850715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_39
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 46
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cf112be4f84d6e0800000000000000
+      internalID: -1813667181765723096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_40
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 13
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ad3b2d4f0a320c0800000000000000
+      internalID: -4601657420875048308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Doom Guy Unnamed Marine Face HUD_41
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 15
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac62be5eda130d50800000000000000
+      internalID: 6702230212831243429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ddc8d05f3b54be346a4e47ca1bd1fb14
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

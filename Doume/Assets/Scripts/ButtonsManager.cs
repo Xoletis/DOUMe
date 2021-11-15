@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class ButtonsManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ButtonsManager : MonoBehaviour
     public GameObject panelOptionsMenu;
     public Dropdown resolutionDropdown;
     public GameObject panelControls;
+    public AudioMixer music;
 
     public void Quitter()
     {
@@ -27,6 +29,11 @@ public class ButtonsManager : MonoBehaviour
         panelMenu.SetActive(false);
 
         panelOptionsMenu.SetActive(true);
+    }
+
+    public void setMusicVolum(float volume)
+    {
+        music.SetFloat("Music", volume);
     }
 
     public void ReturnMenuButton()

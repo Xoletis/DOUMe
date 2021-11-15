@@ -12,18 +12,18 @@ public class DestroyRandomDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        doorRandom = Random.Range(0, 4);
+        doorRandom = Random.Range(0, doors.Count);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             AddEnnemy();
         }
 
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.X))
         {
             DestroyEnnemy();
         }
@@ -40,12 +40,12 @@ public class DestroyRandomDoor : MonoBehaviour
         }
     }
 
-    void AddEnnemy()
+    public void AddEnnemy()
     {
         ennemies++;
     }
 
-    void DestroyEnnemy()
+    public void DestroyEnnemy()
     {
         ennemies--;
     }

@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     {
         inventory = player.GetComponent<PlayerInventory>();
         score = 0;
+
+        AudioManager.instance.Play(0);
     }
 
     // Update is called once per frame

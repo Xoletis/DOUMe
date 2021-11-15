@@ -17,3 +17,4 @@ MonoBehaviour:
   wpnRange: 150
   munitions: 0
   maxMunitions: 250
+  Image: {fileID: -8333970515910574232, guid: d253c902daf15624bad45e8d9d4012b8, type: 3}
