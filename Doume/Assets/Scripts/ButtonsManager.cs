@@ -12,6 +12,8 @@ public class ButtonsManager : MonoBehaviour
     public Dropdown resolutionDropdown;
     public GameObject panelControls;
     public AudioMixer music;
+    public Slider musicSlider;
+    public Toggle fullScreenToggle;
 
     public void Quitter()
     {
@@ -77,6 +79,7 @@ public class ButtonsManager : MonoBehaviour
     Resolution[] resolutions;
     void Start()
     {
+        fullScreenToggle.isOn = Screen.fullScreen;
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
