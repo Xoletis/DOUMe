@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyRandomDoor : MonoBehaviour
 {
-    private int doorRandom;
+    public int doorRandom;
     [SerializeField]
     List<GameObject> doors;
     bool isDestroyed = false;

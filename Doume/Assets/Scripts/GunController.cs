@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GunController : MonoBehaviour
@@ -19,6 +20,8 @@ public class GunController : MonoBehaviour
 
     public UnityEngine.UI.Image weaponImage;
     public UnityEngine.UI.Text ammoText;
+
+    bool canFire = true;
 
     void Start()
     {
@@ -48,7 +51,7 @@ public class GunController : MonoBehaviour
 
         // Vérifie si le joueur a pressé le bouton pour faire feu (bouton gauche de la souris)
         // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
-        if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0) {
+        if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0 && canFire) {
 
             weapon.munitions--;
 
@@ -69,7 +72,6 @@ public class GunController : MonoBehaviour
             // Vérifie si le raycast a touché quelque chose
             if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weapon.wpnRange, layerMask))
             {
-                Debug.Log("Ennemi Touché !");
                 // Vérifie si la cible a un RigidBody attaché
                 if (hit.rigidbody != null)
                 {
@@ -82,11 +84,9 @@ public class GunController : MonoBehaviour
 
     private void ReloadAmmo()
     {
-        if (inventory.GetWeaponReloaderLeft() > 0 && weapon.munitions != weapon.maxMunitions)
+        if (inventory.GetMunition() > 0 && weapon.munitions != weapon.maxMunitions)
         {
-            weapon.munitions = weapon.maxMunitions;
-            inventory.AddReloader(-1);
-            Debug.Log("munitions remplies !");
+            StartCoroutine(reloadTime());
         }
         else
         {
@@ -97,7 +97,27 @@ public class GunController : MonoBehaviour
     public void changeWeapon()
     {
         weapon = inventory.GetWeapon();
-        Debug.Log("Changement d'arme pour : " + weapon.name);
         weaponImage.sprite = weapon.Image;
+    }
+
+    IEnumerator reloadTime()
+    {
+        canFire = false;
+        weaponImage.enabled = false;
+        yield return new WaitForSeconds(weapon.reaoldTime);
+        int munitionARajouter = weapon.maxMunitions - weapon.munitions;
+        if (inventory.GetMunition() < weapon.maxMunitions)
+        {
+            weapon.munitions = inventory.GetMunition();
+            inventory.AddMunition(-inventory.GetMunition());
+        }
+        else
+        {
+            weapon.munitions = weapon.maxMunitions;
+            inventory.AddMunition(-munitionARajouter);
+        }
+        Debug.Log("munitions remplies !");
+        canFire = true;
+        weaponImage.enabled = true;
     }
 }

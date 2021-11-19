@@ -9,7 +9,6 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField]
     public bool isPaused = false;
 
-
     public static PauseMenuManager instance;
 
     private void Awake()
@@ -18,7 +17,6 @@ public class PauseMenuManager : MonoBehaviour
         {
             Debug.LogError("Il y a deux instances de PauseMenuManger dans la scene");
         }
-
         instance = this;
     }
 
@@ -43,7 +41,6 @@ public class PauseMenuManager : MonoBehaviour
     public void ReloadLevel()
     {
         Scene actualScene = SceneManager.GetActiveScene();
-        SceneManager.UnloadScene(actualScene.name);
         SceneManager.LoadScene(actualScene.name);
     }
 

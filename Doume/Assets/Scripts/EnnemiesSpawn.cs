@@ -35,7 +35,6 @@ public class EnnemiesSpawn : MonoBehaviour
 
         while (i < nbEnnemies)
         {
-            Debug.Log("Ok");
             SpawnEnnemies();
             i++;
         }

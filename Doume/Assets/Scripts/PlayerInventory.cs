@@ -15,13 +15,20 @@ public class PlayerInventory : MonoBehaviour
     private WeaponStats weapon;
     private int i = 0;
 
-    [SerializeField]
-    private int weaponReloaderLeft;
+    public int ShotgunAmmo;
+    public int GunAmmo;
+    private int ShotgunAmmoMax = 50;
+    private int GunAmmoMax = 10000;
 
     private GunController gunController;
 
     public Text textVie;
     public Text textArmor;
+
+    public Text shotgunAmmoText;
+    public Text gunAmmoText;
+    public Text shotgunAmmoMaxText;
+    public Text gunAmmoMaxText;
 
     private void Awake()
     {
@@ -31,8 +38,13 @@ public class PlayerInventory : MonoBehaviour
         }
 
         weapon = allWeapons[0];
-        weaponReloaderLeft = 5;
         health = maxHealth;
+        GunAmmo = GunAmmoMax;
+        ShotgunAmmo = ShotgunAmmoMax;
+        shotgunAmmoMaxText.text = ShotgunAmmoMax + "";
+        gunAmmoMaxText.text = GunAmmoMax + "";
+        shotgunAmmoText.text = ShotgunAmmo + "";
+        gunAmmoText.text = GunAmmo + "";
     }
 
     // Start is called before the first frame update
@@ -107,13 +119,44 @@ public class PlayerInventory : MonoBehaviour
         return weapon;
     }
 
-    public int GetWeaponReloaderLeft()
+    public int GetMunition()
     {
-        return weaponReloaderLeft;
+        if(weapon.ammoType == WeaponStats.AmmoType.shotgun)
+        {
+            return ShotgunAmmo;
+        }
+        else if(weapon.ammoType == WeaponStats.AmmoType.gun)
+        {
+            return GunAmmo;
+        }
+        else
+        {
+            return 0;
+        }
     }
 
-    public void AddReloader(int valueToAdd)
+    public void AddMunition(int value)
     {
-        weaponReloaderLeft += valueToAdd;
+        if (weapon.ammoType == WeaponStats.AmmoType.shotgun)
+        {
+            ShotgunAmmo += value;
+        }
+        else if (weapon.ammoType == WeaponStats.AmmoType.gun)
+        {
+           GunAmmo += value;
+        }
+
+        if (ShotgunAmmo >= ShotgunAmmoMax)
+        {
+            ShotgunAmmo = ShotgunAmmoMax;
+        }
+
+        if (GunAmmo >= GunAmmoMax)
+        {
+            GunAmmo = GunAmmoMax;
+        }
+
+        shotgunAmmoText.text = ShotgunAmmo + "";
+        gunAmmoText.text = GunAmmo + "";
     }
 }
