@@ -25,7 +25,7 @@ public class EnnemieAi : MonoBehaviour
 
     private void Awake()
     {
-        door.AddEnnemy();
+       
     }
 
     void Start()
@@ -36,6 +36,7 @@ public class EnnemieAi : MonoBehaviour
         agent.speed = data.speed;
         health = data.health;
         attackCouldown = data.attackCouldown;
+        door.AddEnnemy();
     }
 
     void Update()
@@ -104,12 +105,8 @@ public class EnnemieAi : MonoBehaviour
         if(health <= 0)
         {
             Debug.Log(gameObject.name + " est mort");
+            door.DestroyEnnemy();
             Destroy(gameObject);
         }
-    }
-
-    private void OnDestroy()
-    {
-        door.DestroyEnnemy();
     }
 }

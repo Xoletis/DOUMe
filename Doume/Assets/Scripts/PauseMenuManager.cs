@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuManager : MonoBehaviour
 {
@@ -37,6 +38,13 @@ public class PauseMenuManager : MonoBehaviour
         }
 
         Cursor.visible = isPaused;
+    }
+
+    public void ReloadLevel()
+    {
+        Scene actualScene = SceneManager.GetActiveScene();
+        SceneManager.UnloadScene(actualScene.name);
+        SceneManager.LoadScene(actualScene.name);
     }
 
     public void ContinueGame()

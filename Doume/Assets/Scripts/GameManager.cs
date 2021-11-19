@@ -19,11 +19,10 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Debug.LogError("Il y a plusieurs instance de Game Manger dans la scéne");
+            Debug.LogError("Il y a plusieurs instance de Game Manager dans la scéne");
             Destroy(gameObject);
         }
     }

@@ -8,38 +8,12 @@ public class DestroyRandomDoor : MonoBehaviour
     [SerializeField]
     List<GameObject> doors;
     bool isDestroyed = false;
-    public int ennemies = 10;
+    public int ennemies = 0;
     // Start is called before the first frame update
     void Start()
     {
         doorRandom = Random.Range(0, doors.Count);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            AddEnnemy();
-        }
-
-        if(Input.GetKeyDown(KeyCode.X))
-        {
-            DestroyEnnemy();
-        }
-
-
-        if (ennemies <= 0)
-        {
-            ennemies = 0;
-            if (isDestroyed == false)
-            {
-                Destroy(doors[doorRandom]);
-                isDestroyed = !isDestroyed;
-            }
-        }
-    }
-
     public void AddEnnemy()
     {
         ennemies++;
@@ -48,5 +22,14 @@ public class DestroyRandomDoor : MonoBehaviour
     public void DestroyEnnemy()
     {
         ennemies--;
+        if (ennemies <= 0)
+        {
+            ennemies = 0;
+            if (isDestroyed == false)
+            {
+                doors[doorRandom].GetComponent<spawnNextRoom>().spawnNextEnnemy();
+                isDestroyed = !isDestroyed;
+            }
+        }
     }
 }
