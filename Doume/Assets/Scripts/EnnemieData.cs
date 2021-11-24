@@ -20,7 +20,8 @@ public class EnnemieData : ScriptableObject
     public float attackCouldown;
     [Tooltip("L'ennemie est un ennemie à distance")]
     public bool isRangeEnnemie;
-    
+    public int droopRate = 70;
+
     public GameObject bullet; 
 }
 
@@ -39,7 +40,8 @@ public class MyScriptEditor : Editor
         ennemieData.viewArea = EditorGUILayout.FloatField("Zone to view Player : ", ennemieData.viewArea);
         ennemieData.attackCouldown = EditorGUILayout.FloatField("Time enter attack in s : ", ennemieData.attackCouldown);
         ennemieData.attackRange = EditorGUILayout.FloatField("Distance to Attack : ", ennemieData.attackRange);
-        ennemieData.isRangeEnnemie = GUILayout.Toggle(ennemieData.isRangeEnnemie, "IsRangeEnnemie : ");
+        ennemieData.droopRate = EditorGUILayout.IntField("Chance to drop item (%) : ", ennemieData.droopRate);
+        ennemieData.isRangeEnnemie = GUILayout.Toggle(ennemieData.isRangeEnnemie, " : IsRangeEnnemie");
 
         if (ennemieData.isRangeEnnemie)
         {

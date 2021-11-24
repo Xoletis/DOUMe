@@ -155,6 +155,8 @@ MonoBehaviour:
   playerDamageFonctionName: HurtPlayer
   attackCouldown: 0
   health: 0
+  DropList:
+  - {fileID: 8613227832618555860, guid: 633179686391b2d4c91a295926c6d981, type: 3}
   door: {fileID: 0}
 --- !u!54 &1638765889
 Rigidbody:

@@ -21,6 +21,8 @@ public class EnnemieAi : MonoBehaviour
     [SerializeField]
     private float health;
 
+    public GameObject[] DropList;
+
     public DestroyRandomDoor door;
 
     void Start()
@@ -113,6 +115,11 @@ public class EnnemieAi : MonoBehaviour
         if(health <= 0)
         {
             door.DestroyEnnemy();
+            if(Random.Range(0,100) < data.droopRate)
+            {
+                int objectIndexToDrop = Random.Range(0, DropList.Length);
+                Instantiate(DropList[objectIndexToDrop], transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }
