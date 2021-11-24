@@ -21,6 +21,13 @@ public class EnnemieAi : MonoBehaviour
     [SerializeField]
     private float health;
 
+    public DestroyRandomDoor door;
+
+    private void Awake()
+    {
+       
+    }
+
     void Start()
     {
         //assignation des différentes variables privées
@@ -29,6 +36,7 @@ public class EnnemieAi : MonoBehaviour
         agent.speed = data.speed;
         health = data.health;
         attackCouldown = data.attackCouldown;
+        door.AddEnnemy();
     }
 
     void Update()
@@ -93,10 +101,9 @@ public class EnnemieAi : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        Debug.Log("Vous avvez donner " + damage + " dégat à " + this.name);
         if(health <= 0)
         {
-            Debug.Log(gameObject.name + " est mort");
+            door.DestroyEnnemy();
             Destroy(gameObject);
         }
     }

@@ -1,37 +1,76 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-     public GameObject player;
+   
+    public GameObject player;
     private PlayerInventory inventory;
     [SerializeField]
     private int score;
+
+    public string nameOfScoreScene;
+    public string nameOfGameScene;
+
+    public static GameManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogError("Il y a plusieurs instance de Game Manager dans la scéne");
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         inventory = player.GetComponent<PlayerInventory>();
         score = 0;
+
+        AudioManager.instance.Play(0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (SceneManager.GetActiveScene().name == nameOfGameScene)
         {
-            inventory.HurtPlayer(20);
-        }
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                inventory.HurtPlayer(20);
+            }
 
-        if (inventory.GetHealth() <= 0)
-        {
-            Debug.Log("mort du joueur");
+            if (inventory.IsDead())
+            {
+                Debug.Log("mort du joueur");
+                SceneManager.LoadScene(nameOfScoreScene);
+            }
+
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                SceneManager.LoadScene(nameOfScoreScene);
+            }
+
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                score += 20;
+            }
         }
     }
 
     public void AddScore(int scoreToAdd)
     {
         score += scoreToAdd;
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }

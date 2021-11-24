@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Ennemie
   m_EditorClassIdentifier: 
   nom: Ennemie
-  health: 2
+  health: 50
   damage: 2
   speed: 5
   viewArea: 100
   attackRange: 6
-  attackCouldown: 5
+  attackCouldown: 1
