@@ -23,11 +23,6 @@ public class EnnemieAi : MonoBehaviour
 
     public DestroyRandomDoor door;
 
-    private void Awake()
-    {
-       
-    }
-
     void Start()
     {
         //assignation des différentes variables privées
@@ -50,7 +45,21 @@ public class EnnemieAi : MonoBehaviour
                 //attaque si le couldown est fini
                 if(attackCouldown <= 0.0f)
                 {
-                    Player.SendMessage(playerDamageFonctionName, data.damage);
+                    if (data.isRangeEnnemie)
+                    {
+                        Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+                        Vector3 dir = (playerPos - transform.position).normalized;
+                        Vector3 vector = new Vector3(0, 0, 2f) + dir;
+                        
+                        GameObject bullet = Instantiate(data.bullet, transform.position, Quaternion.identity);
+                        bullet.GetComponent<Bullet>().damage = data.damage;
+                        bullet.GetComponent<Bullet>().playerDamageFonctionName = playerDamageFonctionName;
+                        
+                    }
+                    else
+                    {
+                        Player.SendMessage(playerDamageFonctionName, data.damage);
+                    }
                     attackCouldown = data.attackCouldown;
                 }
                 else

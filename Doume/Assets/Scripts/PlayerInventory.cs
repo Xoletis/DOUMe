@@ -137,13 +137,16 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddMunition(int value)
     {
+        int ammoRest = value - (weapon.maxMunitions - weapon.munitions);
+        weapon.munitions = weapon.maxMunitions;
+
         if (weapon.ammoType == WeaponStats.AmmoType.shotgun)
         {
-            ShotgunAmmo += value;
+            ShotgunAmmo += ammoRest;
         }
         else if (weapon.ammoType == WeaponStats.AmmoType.gun)
         {
-           GunAmmo += value;
+           GunAmmo += ammoRest;
         }
 
         if (ShotgunAmmo >= ShotgunAmmoMax)
