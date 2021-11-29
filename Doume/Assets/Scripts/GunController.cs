@@ -42,7 +42,6 @@ public class GunController : MonoBehaviour
             ReloadAmmo();
         }
 
-        
         if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions == 0)
         {
             Debug.Log("Pas de munitions");
@@ -77,6 +76,12 @@ public class GunController : MonoBehaviour
                 {
                     //S'assure que la cible touchée a un composant ReceiveAction
                     hit.collider.gameObject.SendMessage(enemieDamageFunction, weapon.wpnDmg);
+                }
+
+                if (hit.transform.tag == "ExplosiveBarrel")
+                {
+                    Debug.Log("Barrel Touché !");
+                    hit.transform.GetComponent<ExplosiveBarrel>().Explode();
                 }
             }
         }
