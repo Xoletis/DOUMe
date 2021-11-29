@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[System.Serializable]
+public struct item{
+    public GameObject DropObject;
+    public int chance;
+}
+
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnnemieAi : MonoBehaviour
 {
@@ -20,8 +26,10 @@ public class EnnemieAi : MonoBehaviour
     float attackCouldown;
     [SerializeField]
     public float health;
+    public GameObject blood;
 
-    public GameObject[] DropList;
+    [SerializeField]
+    public item[] DropList;
 
     public DestroyRandomDoor door;
 
@@ -113,15 +121,31 @@ public class EnnemieAi : MonoBehaviour
     {
         Debug.Log("Touché");
         health -= damage;
-        if(health <= 0)
+        Instantiate(blood, transform.position, Quaternion.identity);
+
+        if (health <= 0)
         {
             door.DestroyEnnemy();
-            if(Random.Range(0,100) < data.droopRate)
+            Instantiate(blood, transform.position, Quaternion.identity);
+            if (Random.Range(0,100) < data.droopRate)
             {
-                int objectIndexToDrop = Random.Range(0, DropList.Length);
-                Instantiate(DropList[objectIndexToDrop], transform.position, Quaternion.identity);
+                for (int i = 0; i < DropList.Length; i++)
+                {
+                    int _ObjetDrop = Random.Range(0, 100);
+                    if(_ObjetDrop < DropList[i].chance)
+                    {
+                        Drop(DropList[i].DropObject);
+                        return;
+                    }
+                }
             }
             Destroy(gameObject);
         }
+    }
+
+    public void Drop(GameObject objet)
+    {
+        Instantiate(objet, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

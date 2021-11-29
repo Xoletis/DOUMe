@@ -21,7 +21,6 @@ public class EnnemiesSpawn : MonoBehaviour
     {
         int ennemiesIndex = Random.Range(0, ennemies.Length);
         GameObject ennemy =  Instantiate(ennemies[ennemiesIndex],spawners[spawnerIndex].transform.position, Quaternion.identity);
-        ennemy.GetComponent<LookingAtCamera>().player = GameObject.FindGameObjectWithTag("Player");
         ennemy.GetComponent<EnnemieAi>().door = this.GetComponent<DestroyRandomDoor>();
         spawnerIndex++;
         ennemy.GetComponent<EnnemieAi>().enabled = false;

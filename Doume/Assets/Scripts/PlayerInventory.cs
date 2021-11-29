@@ -177,6 +177,17 @@ public class PlayerInventory : MonoBehaviour
         refreshscreen();
     }
 
+    public void AddArmor(int value)
+    {
+        armor += value;
+        if(armor > maxArmor)
+        {
+            armor = maxArmor;
+        }
+
+        refreshscreen();
+    }
+
     public void refreshscreen() {
         shotgunAmmoText.text = ShotgunAmmo + "";
         gunAmmoText.text = GunAmmo + "";

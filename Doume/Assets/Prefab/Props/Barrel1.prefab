@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3831200199221769151}
   - component: {fileID: 3831200199221769122}
   - component: {fileID: 3831200199221769123}
-  m_Layer: 0
+  - component: {fileID: 8484945089206963287}
+  m_Layer: 3
   m_Name: Barrel1
-  m_TagString: Untagged
+  m_TagString: ExplosiveBarrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,3 +131,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8470260402497997401, guid: d3cf9d4e1e26749419c56a9c3abda426, type: 3}
+--- !u!114 &8484945089206963287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3831200199221769150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c59638adf8b74c46b8032619cb18a20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explo: {fileID: 6284049760296652208, guid: d1ac68ba9bb2f8040bf7fdbea98a4e55, type: 3}

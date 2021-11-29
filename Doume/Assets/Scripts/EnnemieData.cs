@@ -25,7 +25,7 @@ public class EnnemieData : ScriptableObject
     public GameObject bullet; 
 }
 
-[CustomEditor(typeof(EnnemieData))]
+/*[CustomEditor(typeof(EnnemieData))]
 public class MyScriptEditor : Editor
 {
 
@@ -49,4 +49,4 @@ public class MyScriptEditor : Editor
         }
         serializedObject.ApplyModifiedProperties();
     }
-}
+}*/

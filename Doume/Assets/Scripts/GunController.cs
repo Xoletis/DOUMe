@@ -75,8 +75,15 @@ public class GunController : MonoBehaviour
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, weapon.wpnRange, mask))
             {
                 Debug.Log(hit.collider.name);
-                //S'assure que la cible touchée a un composant ReceiveAction
-                hit.collider.gameObject.SendMessage(enemieDamageFunction, weapon.wpnDmg);
+                if (hit.transform.tag == "ExplosiveBarrel")
+                {
+                    Debug.Log("Barrel Touché !");
+                    hit.transform.GetComponent<ExplosiveBarrel>().Explode();
+                }
+                else
+                {
+                    hit.collider.gameObject.SendMessage(enemieDamageFunction, weapon.wpnDmg);
+                }
             }
         }
     }

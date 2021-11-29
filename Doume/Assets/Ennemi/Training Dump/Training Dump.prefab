@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2839353334857473247}
   - component: {fileID: 2839353334857473243}
   - component: {fileID: 2839353334857473244}
-  - component: {fileID: 6271399456251189450}
   - component: {fileID: 2578064499227496948}
+  - component: {fileID: 5197896533781056843}
   m_Layer: 3
   m_Name: Training Dump
   m_TagString: Ennemie
@@ -75,27 +75,16 @@ MonoBehaviour:
   playerDamageFonctionName: HurtPlayer
   attackCouldown: 0
   health: 0
+  blood: {fileID: 5532776379459391, guid: 8665e308e8b72e841bae7f815f8905ee, type: 3}
   DropList:
   - {fileID: 8613227832618555860, guid: 633179686391b2d4c91a295926c6d981, type: 3}
   - {fileID: 6518939505438168342, guid: 59c6d412355859a45960ecd1d2afaba7, type: 3}
   - {fileID: 3485712381945296717, guid: 1d65c5ccdec87da428cf4e7fe81a1835, type: 3}
+  - {fileID: 6410204036386258931, guid: 14101aef3bea0a443b1ad72046d307a1, type: 3}
+  - {fileID: 7338103049424040430, guid: 83413372de7968649aa1b6aa01571dfe, type: 3}
+  - {fileID: 5715166096592656514, guid: 8c1302ec4de1b0b4da7ea6a31b6fbf4a, type: 3}
+  - {fileID: 4421121948209567079, guid: 6491dd79666918140bd594efceea21d3, type: 3}
   door: {fileID: 0}
---- !u!54 &6271399456251189450
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2839353334857473242}
-  serializedVersion: 2
-  m_Mass: 50
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!65 &2578064499227496948
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -109,6 +98,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.41064, y: 2.2098122, z: 2.41064}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5197896533781056843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839353334857473242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186bda0a20ad5b3429a19b36eb30cef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &4444014817725120697
 GameObject:
   m_ObjectHideFlags: 0

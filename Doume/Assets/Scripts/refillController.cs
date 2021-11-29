@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class refillController : MonoBehaviour
 {
-    public enum Type { AllAmmo, Gun, Shotgun }
+    public enum Type { AllAmmo, Gun, Shotgun, Armor }
     public Type typeToRefill;
 
 
-    public int nbMunitonToAdd = 5;
+    public int nbToAdd = 5;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,11 +16,13 @@ public class refillController : MonoBehaviour
         {
             switch (typeToRefill)
             {
-                case Type.AllAmmo: other.gameObject.GetComponent<PlayerInventory>().AddMunition(nbMunitonToAdd);
+                case Type.AllAmmo: other.gameObject.GetComponent<PlayerInventory>().AddMunition(nbToAdd);
                     break;
-                case Type.Gun: other.gameObject.GetComponent<PlayerInventory>().AddGunAmmo(nbMunitonToAdd);
+                case Type.Gun: other.gameObject.GetComponent<PlayerInventory>().AddGunAmmo(nbToAdd);
                     break;
-                case Type.Shotgun: other.gameObject.GetComponent<PlayerInventory>().AddShotgunAmmo(nbMunitonToAdd);
+                case Type.Shotgun: other.gameObject.GetComponent<PlayerInventory>().AddShotgunAmmo(nbToAdd);
+                    break;
+                case Type.Armor: other.gameObject.GetComponent<PlayerInventory>().AddArmor(nbToAdd);
                     break;
             }
             Debug.Log("Collison détectée");
