@@ -35,14 +35,15 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward * weapon.wpnRange, Color.white);
+
         ammoText.text = weapon.munitions + "";
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             ReloadAmmo();
         }
-
-        Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward * weapon.wpnRange, Color.white);
 
         if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions == 0)
         {
@@ -71,8 +72,9 @@ public class GunController : MonoBehaviour
             RaycastHit hit;
 
             // Vérifie si le raycast a touché quelque chose
-            if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weapon.wpnRange, mask))
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, weapon.wpnRange, mask))
             {
+                Debug.Log(hit.collider.name);
                 //S'assure que la cible touchée a un composant ReceiveAction
                 hit.collider.gameObject.SendMessage(enemieDamageFunction, weapon.wpnDmg);
             }

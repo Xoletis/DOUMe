@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wpnDmg: 10
   fireRate: 0.02
-  wpnRange: 5
+  wpnRange: 1000
   munitions: 250
   maxMunitions: 250
   reaoldTime: 5

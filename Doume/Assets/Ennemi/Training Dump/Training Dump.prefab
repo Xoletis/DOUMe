@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2839353334857473244}
   - component: {fileID: 6271399456251189450}
   - component: {fileID: 2578064499227496948}
-  - component: {fileID: 2839353334857473241}
   m_Layer: 3
   m_Name: Training Dump
   m_TagString: Ennemie
@@ -33,6 +32,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 6271399456471368450}
+  - {fileID: 6271399458207745114}
   - {fileID: 4260277304778339389}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,19 +109,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.41064, y: 2.2098122, z: 2.41064}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2839353334857473241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2839353334857473242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 186bda0a20ad5b3429a19b36eb30cef1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!1 &4444014817725120697
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,10 +137,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.03, y: 1.356, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6271399458207745114}
+  m_Children: []
   m_Father: {fileID: 2839353334857473247}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2743412275320825663
 BoxCollider:
@@ -287,11 +273,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6271399458207745115}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.029999733, y: 1.356, z: 0}
   m_LocalScale: {x: 2.8835862, y: 2.8835862, z: 2.8835862}
   m_Children: []
-  m_Father: {fileID: 4260277304778339389}
-  m_RootOrder: 0
+  m_Father: {fileID: 2839353334857473247}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6271399458207745113
 SpriteRenderer:
