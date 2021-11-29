@@ -1,7 +1,4 @@
-<strong>Realese 1.3.0</strong>
+<strong>Realese 1.3.1</strong>
 
-* Ajout du sang des ennemies
-* Ajout du drop des différents items par les mobs
-* Ajout De l'explosion du baril en feu
-* Correction du bug qui traverse les portes
-* Le baril d'acide ne ce déplace plus
+* Correction bug du drop des ennemie
+* Trie des scripts

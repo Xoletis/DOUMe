@@ -12,7 +12,6 @@ public struct item{
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnnemieAi : MonoBehaviour
 {
-
     [Tooltip("stats de l'ennemie")]
     public EnnemieData data;
     //référence au joueur
@@ -129,23 +128,19 @@ public class EnnemieAi : MonoBehaviour
             Instantiate(blood, transform.position, Quaternion.identity);
             if (Random.Range(0,100) < data.droopRate)
             {
+                List<GameObject> objetToDrop = new List<GameObject>();
                 for (int i = 0; i < DropList.Length; i++)
                 {
-                    int _ObjetDrop = Random.Range(0, 100);
-                    if(_ObjetDrop < DropList[i].chance)
+                    for (int j = 0; j < DropList[i].chance; j++)
                     {
-                        Drop(DropList[i].DropObject);
-                        return;
+                        objetToDrop.Add(DropList[i].DropObject);
                     }
                 }
+
+                int dropObject = Random.Range(0, objetToDrop.Capacity);
+                Instantiate(objetToDrop[dropObject], transform.position, Quaternion.identity);
             }
             Destroy(gameObject);
         }
-    }
-
-    public void Drop(GameObject objet)
-    {
-        Instantiate(objet, transform.position, Quaternion.identity);
-        Destroy(gameObject);
     }
 }

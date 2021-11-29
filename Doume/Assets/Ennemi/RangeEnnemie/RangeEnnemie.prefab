@@ -156,13 +156,20 @@ MonoBehaviour:
   health: 0
   blood: {fileID: 5532776379459391, guid: 8665e308e8b72e841bae7f815f8905ee, type: 3}
   DropList:
-  - {fileID: 8613227832618555860, guid: 633179686391b2d4c91a295926c6d981, type: 3}
-  - {fileID: 6518939505438168342, guid: 59c6d412355859a45960ecd1d2afaba7, type: 3}
-  - {fileID: 3485712381945296717, guid: 1d65c5ccdec87da428cf4e7fe81a1835, type: 3}
-  - {fileID: 6410204036386258931, guid: 14101aef3bea0a443b1ad72046d307a1, type: 3}
-  - {fileID: 7338103049424040430, guid: 83413372de7968649aa1b6aa01571dfe, type: 3}
-  - {fileID: 5715166096592656514, guid: 8c1302ec4de1b0b4da7ea6a31b6fbf4a, type: 3}
-  - {fileID: 4421121948209567079, guid: 6491dd79666918140bd594efceea21d3, type: 3}
+  - DropObject: {fileID: 8613227832618555860, guid: 633179686391b2d4c91a295926c6d981, type: 3}
+    chance: 10
+  - DropObject: {fileID: 6410204036386258931, guid: 14101aef3bea0a443b1ad72046d307a1, type: 3}
+    chance: 30
+  - DropObject: {fileID: 7338103049424040430, guid: 83413372de7968649aa1b6aa01571dfe, type: 3}
+    chance: 20
+  - DropObject: {fileID: 5715166096592656514, guid: 8c1302ec4de1b0b4da7ea6a31b6fbf4a, type: 3}
+    chance: 10
+  - DropObject: {fileID: 4421121948209567079, guid: 6491dd79666918140bd594efceea21d3, type: 3}
+    chance: 5
+  - DropObject: {fileID: 6518939505438168342, guid: 59c6d412355859a45960ecd1d2afaba7, type: 3}
+    chance: 20
+  - DropObject: {fileID: 3485712381945296717, guid: 1d65c5ccdec87da428cf4e7fe81a1835, type: 3}
+    chance: 20
   door: {fileID: 0}
 --- !u!65 &8417048023049411711
 BoxCollider:
