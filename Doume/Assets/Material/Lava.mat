@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Lava
-  m_Shader: {fileID: 4800000, guid: 80aa867ac363ac043847b06ad71604cd, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: d4f90ea06263835428beec5f844375a4, type: 3}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 1
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_26e513b635be4fe88ca64ddb40511dfa:
+        m_Texture: {fileID: 2800000, guid: aa74154b19f2f344aa6b7960a2a5d72a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AlphaTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -131,6 +135,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Triplanar_a5135209eb544387bd64b119ac341a83_Texture_1:
+        m_Texture: {fileID: 2800000, guid: fc3cfb6565066a24097e83729c557b01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -145,6 +153,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_8A2B8817: 0
+    - PixelSnap: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BlendOp: 0
@@ -204,10 +213,13 @@ Material:
     - _UseRoughnessMap: 0
     - _ZWrite: 1
     m_Colors:
+    - Vector2_35abe30040f74e47a74c1bf745191131: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - Vector2_434fbbaa832c412d8bad0e8398086588: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - Vector2_ed0f44d966d64d638b2d2ca2998ee88f: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.7200983, g: 0.8490566, b: 0.06728367, a: 1}
+    - _Color: {r: 0.43529412, g: 0.43529412, b: 0.43137255, a: 1}
     - _EmissionColor: {r: 273.06668, g: 184.72157, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
