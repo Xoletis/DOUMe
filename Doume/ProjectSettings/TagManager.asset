@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Salle1
+  - Ennemie
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ennemie
+  - Destructible
   - Water
   - UI
-  - 
+  - NonDestructible
   - 
   - 
   - 

@@ -19,7 +19,7 @@ public class EnnemieAi : MonoBehaviour
     [SerializeField]
     float attackCouldown;
     [SerializeField]
-    private float health;
+    public float health;
 
     public GameObject[] DropList;
 
@@ -111,6 +111,7 @@ public class EnnemieAi : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Debug.Log("Touché");
         health -= damage;
         if(health <= 0)
         {

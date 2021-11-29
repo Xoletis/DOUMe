@@ -10,7 +10,7 @@ public class GunController : MonoBehaviour
     private float nextFire;
 
     //Détermine sur quel Layer on peut tirer
-    public LayerMask layerMask;
+    public LayerMask mask;
 
     private PlayerInventory inventory;
     [SerializeField]
@@ -42,7 +42,8 @@ public class GunController : MonoBehaviour
             ReloadAmmo();
         }
 
-        
+        Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward * weapon.wpnRange, Color.white);
+
         if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions == 0)
         {
             Debug.Log("Pas de munitions");
@@ -51,7 +52,8 @@ public class GunController : MonoBehaviour
 
         // Vérifie si le joueur a pressé le bouton pour faire feu (bouton gauche de la souris)
         // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
-        if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0 && canFire) {
+        if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0 && canFire)
+        {
 
             weapon.munitions--;
 
@@ -63,21 +65,16 @@ public class GunController : MonoBehaviour
             //On va lancer un rayon invisible qui simulera les balles du gun
 
             //Crée un vecteur au centre de la vue de la caméra
-            Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
+            Vector3 rayOrigin = fpsCam.transform.position;
 
             //RaycastHit : permet de savoir ce que le rayon a touché
             RaycastHit hit;
 
-
             // Vérifie si le raycast a touché quelque chose
-            if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weapon.wpnRange, layerMask))
+            if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weapon.wpnRange, mask))
             {
-                // Vérifie si la cible a un RigidBody attaché
-                if (hit.rigidbody != null)
-                {
-                    //S'assure que la cible touchée a un composant ReceiveAction
-                    hit.collider.gameObject.SendMessage(enemieDamageFunction, weapon.wpnDmg);
-                }
+                //S'assure que la cible touchée a un composant ReceiveAction
+                hit.collider.gameObject.SendMessage(enemieDamageFunction, weapon.wpnDmg);
             }
         }
     }

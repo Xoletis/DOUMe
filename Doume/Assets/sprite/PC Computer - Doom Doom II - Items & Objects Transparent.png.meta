@@ -23,6 +23,18 @@ TextureImporter:
   - first:
       213: -5744722799440091748
     second: PC Computer - Doom Doom II - Items & Objects Transparent_7
+  - first:
+      213: 8423821521343563642
+    second: PC Computer - Doom Doom II - Items & Objects Transparent_8
+  - first:
+      213: 4866907035299183240
+    second: PC Computer - Doom Doom II - Items & Objects Transparent_9
+  - first:
+      213: -2772654212348373176
+    second: PC Computer - Doom Doom II - Items & Objects Transparent_10
+  - first:
+      213: 7389332830546368690
+    second: PC Computer - Doom Doom II - Items & Objects Transparent_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -275,6 +287,90 @@ TextureImporter:
       bones: []
       spriteID: c95294efc05a640b0800000000000000
       internalID: -5744722799440091748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Items & Objects Transparent_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 573
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7749f6da0d67e470800000000000000
+      internalID: 8423821521343563642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Items & Objects Transparent_9
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 622
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a7bd1a92aba8340800000000000000
+      internalID: 4866907035299183240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Items & Objects Transparent_10
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 692
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8471cfb1fad8589d0800000000000000
+      internalID: -2772654212348373176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Items & Objects Transparent_11
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 687
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b819db1f0f2c8660800000000000000
+      internalID: 7389332830546368690
       vertices: []
       indices: 
       edges: []

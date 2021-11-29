@@ -41,10 +41,7 @@ public class PlayerInventory : MonoBehaviour
         health = maxHealth;
         GunAmmo = GunAmmoMax;
         ShotgunAmmo = ShotgunAmmoMax;
-        shotgunAmmoMaxText.text = ShotgunAmmoMax + "";
-        gunAmmoMaxText.text = GunAmmoMax + "";
-        shotgunAmmoText.text = ShotgunAmmo + "";
-        gunAmmoText.text = GunAmmo + "";
+        refreshscreen();
     }
 
     // Start is called before the first frame update
@@ -104,8 +101,7 @@ public class PlayerInventory : MonoBehaviour
             health -= (damage - armor);
             armor = 0;
         }
-        textVie.text = (health * 100) / maxHealth + "%";
-        textArmor.text = (armor * 100) / maxArmor + "%";
+        refreshscreen();
     }
 
     // Le joueur est-il mort ?
@@ -158,8 +154,35 @@ public class PlayerInventory : MonoBehaviour
         {
             GunAmmo = GunAmmoMax;
         }
+        refreshscreen();
+    }
 
+    public void AddGunAmmo(int value)
+    {
+        GunAmmo += value;
+        if (GunAmmo >= GunAmmoMax)
+        {
+            GunAmmo = GunAmmoMax;
+        }
+        refreshscreen();
+    }
+
+    public void AddShotgunAmmo(int value)
+    {
+        ShotgunAmmo += value;
+        if (ShotgunAmmo >= ShotgunAmmoMax)
+        {
+            ShotgunAmmo = ShotgunAmmoMax;
+        }
+        refreshscreen();
+    }
+
+    public void refreshscreen() {
         shotgunAmmoText.text = ShotgunAmmo + "";
         gunAmmoText.text = GunAmmo + "";
+        textVie.text = (health * 100) / maxHealth + "%";
+        textArmor.text = (armor * 100) / maxArmor + "%";
+        gunAmmoMaxText.text = GunAmmoMax + "";
+        shotgunAmmoMaxText.text = ShotgunAmmoMax + "";
     }
 }
