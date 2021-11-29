@@ -1,4 +1,4 @@
-<strong>Realese 1.3.0</strong>
+Realese 1.3.0
 
 * Ajout du sang des ennemies
 * Ajout du drop des différents items par les mobs
