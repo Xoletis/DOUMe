@@ -54,6 +54,7 @@ public class EnnemieAi : MonoBehaviour
                 //attaque si le couldown est fini
                 if(attackCouldown <= 0.0f)
                 {
+                    //Si a distance on tire sinon on attack
                     if (data.isRangeEnnemie)
                     {
                         Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
@@ -73,9 +74,11 @@ public class EnnemieAi : MonoBehaviour
                 }
                 else
                 {
+                    //on baisse le couldown
                     attackCouldown -= Time.deltaTime;
                 }
-               
+
+                //stop le déplacement
                 agent.isStopped = true;
             }
             else
@@ -87,7 +90,7 @@ public class EnnemieAi : MonoBehaviour
         }
         else
         {
-            //srop le déplacement
+            //stop le déplacement
             agent.isStopped = true;
         }
     }
@@ -107,7 +110,7 @@ public class EnnemieAi : MonoBehaviour
         return false;
     }
 
-    //dessine les sphére de débug
+    //dessine les sphéres de debug
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -116,31 +119,43 @@ public class EnnemieAi : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, data.attackRange);
     }
 
+
+    //prendre des dommages
     public void TakeDamage(float damage)
     {
         Debug.Log("Touché");
         health -= damage;
+        //on instantie les particules de sang
         Instantiate(blood, transform.position, Quaternion.identity);
 
+        //mort
         if (health <= 0)
         {
-            door.DestroyEnnemy();
-            Instantiate(blood, transform.position, Quaternion.identity);
-            if (Random.Range(0,100) < data.droopRate)
-            {
-                List<GameObject> objetToDrop = new List<GameObject>();
-                for (int i = 0; i < DropList.Length; i++)
-                {
-                    for (int j = 0; j < DropList[i].chance; j++)
-                    {
-                        objetToDrop.Add(DropList[i].DropObject);
-                    }
-                }
-
-                int dropObject = Random.Range(0, objetToDrop.Capacity);
-                Instantiate(objetToDrop[dropObject], transform.position, Quaternion.identity);
-            }
-            Destroy(gameObject);
+            Death();
         }
+    }
+
+    public void Death()
+    {
+        //on enléve un ennemei de la sale
+        door.DestroyEnnemy();
+        //on instantie les particules de sang
+        Instantiate(blood, transform.position, Quaternion.identity);
+        //Drop du loot alléatoire
+        if (Random.Range(0, 100) < data.droopRate)
+        {
+            List<GameObject> objetToDrop = new List<GameObject>();
+            for (int i = 0; i < DropList.Length; i++)
+            {
+                for (int j = 0; j < DropList[i].chance; j++)
+                {
+                    objetToDrop.Add(DropList[i].DropObject);
+                }
+            }
+
+            int dropObject = Random.Range(0, objetToDrop.Capacity);
+            Instantiate(objetToDrop[dropObject], transform.position, Quaternion.identity);
+        }
+        Destroy(gameObject);
     }
 }

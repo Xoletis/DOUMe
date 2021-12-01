@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b0fa6cc11389b46b3b0b2ba966e83c, type: 3}
   m_Name: RangeEnnemie
   m_EditorClassIdentifier: 
-  nom: Ennemie
   health: 50
   damage: 2
   speed: 5
   viewArea: 100
   attackRange: 6
   attackCouldown: 1
+  isRangeEnnemie: 1
+  droopRate: 70
+  bullet: {fileID: 6947535345448991744, guid: ff523068e99b4044e9672244c1916c8a, type: 3}

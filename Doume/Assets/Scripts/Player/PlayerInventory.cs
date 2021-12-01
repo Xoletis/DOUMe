@@ -3,24 +3,14 @@ using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [SerializeField]
-    private int health;
-    [SerializeField]
-    private int armor;
-
-    public int maxHealth = 100;
-    public int maxArmor = 100;
 
     public WeaponStats[] allWeapons;
     private WeaponStats weapon;
     private int i = 0;
 
-    public int ShotgunAmmo;
-    public int GunAmmo;
-    private int ShotgunAmmoMax = 50;
-    private int GunAmmoMax = 10000;
-
     private GunController gunController;
+
+    public Stat stat;
 
     public Text textVie;
     public Text textArmor;
@@ -38,20 +28,19 @@ public class PlayerInventory : MonoBehaviour
         }
 
         weapon = allWeapons[0];
-        health = maxHealth;
-        GunAmmo = GunAmmoMax;
-        ShotgunAmmo = ShotgunAmmoMax;
+        stat.health = stat.maxHealth;
+        stat.GunAmmo = stat.GunAmmoMax;
+        stat.ShotgunAmmo = stat.ShotgunAmmoMax;
         refreshscreen();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        armor = 0;
+        stat.armor = 0;
 
         gunController = gameObject.GetComponent<GunController>();
-        textVie.text = (health * 100) / maxHealth + "%";
-        textArmor.text = (armor * 100) / maxArmor + "%";
+        refreshscreen();
     }
 
     void Update()
@@ -72,34 +61,15 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-    // Getter des variables
-    public int GetHealth()
-    {
-        return health;
-    }
-    public int GetMaxHealth()
-    {
-        return maxHealth;
-    }
-
-    public int GetArmor()
-    {
-        return armor;
-    }
-    public int GetMaxArmor()
-    {
-        return maxArmor;
-    }
-
     // Le joueur perd des points de vie / d'armure
     public void HurtPlayer(int damage)
     {
-        if (armor > damage)
-            armor -= damage;
-        else if (armor < damage)
+        if (stat.armor > damage)
+            stat.armor -= damage;
+        else if (stat.armor < damage)
         {
-            health -= (damage - armor);
-            armor = 0;
+            stat.health -= (damage - stat.armor);
+            stat.armor = 0;
         }
         refreshscreen();
     }
@@ -107,23 +77,25 @@ public class PlayerInventory : MonoBehaviour
     // Le joueur est-il mort ?
     public bool IsDead()
     {
-        return health <= 0;
+        return stat.health <= 0;
     }
 
+    //on récupére l'arme actuelle
     public WeaponStats GetWeapon()
     {
         return weapon;
     }
 
+    //On récupere le nombre de munition actuelle
     public int GetMunition()
     {
         if(weapon.ammoType == WeaponStats.AmmoType.shotgun)
         {
-            return ShotgunAmmo;
+            return stat.ShotgunAmmo;
         }
         else if(weapon.ammoType == WeaponStats.AmmoType.gun)
         {
-            return GunAmmo;
+            return stat.GunAmmo;
         }
         else
         {
@@ -131,6 +103,7 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    // ajout de n'importe quelle munition
     public void AddMunition(int value)
     {
         int ammoRest = value - (weapon.maxMunitions - weapon.munitions);
@@ -138,62 +111,92 @@ public class PlayerInventory : MonoBehaviour
 
         if (weapon.ammoType == WeaponStats.AmmoType.shotgun)
         {
-            ShotgunAmmo += ammoRest;
+            stat.ShotgunAmmo += ammoRest;
         }
         else if (weapon.ammoType == WeaponStats.AmmoType.gun)
         {
-           GunAmmo += ammoRest;
+            stat.GunAmmo += ammoRest;
         }
 
-        if (ShotgunAmmo >= ShotgunAmmoMax)
+        if (stat.ShotgunAmmo >= stat.ShotgunAmmoMax)
         {
-            ShotgunAmmo = ShotgunAmmoMax;
+            stat.ShotgunAmmo = stat.ShotgunAmmoMax;
         }
 
-        if (GunAmmo >= GunAmmoMax)
+        if (stat.GunAmmo >= stat.GunAmmoMax)
         {
-            GunAmmo = GunAmmoMax;
+            stat.GunAmmo = stat.GunAmmoMax;
         }
         refreshscreen();
     }
 
+    //Ajout de balle de pistolet
     public void AddGunAmmo(int value)
     {
-        GunAmmo += value;
-        if (GunAmmo >= GunAmmoMax)
+        stat.GunAmmo += value;
+        if (stat.GunAmmo >= stat.GunAmmoMax)
         {
-            GunAmmo = GunAmmoMax;
+            stat.GunAmmo = stat.GunAmmoMax;
         }
         refreshscreen();
     }
 
+    //Ajout de balle de Shotgun
     public void AddShotgunAmmo(int value)
     {
-        ShotgunAmmo += value;
-        if (ShotgunAmmo >= ShotgunAmmoMax)
+        stat.ShotgunAmmo += value;
+        if (stat.ShotgunAmmo >= stat.ShotgunAmmoMax)
         {
-            ShotgunAmmo = ShotgunAmmoMax;
+            stat.ShotgunAmmo = stat.ShotgunAmmoMax;
         }
         refreshscreen();
     }
 
+    //Ajout d'armur
     public void AddArmor(int value)
     {
-        armor += value;
-        if(armor > maxArmor)
+        stat.armor += value;
+        if(stat.armor > stat.maxArmor)
         {
-            armor = maxArmor;
+            stat.armor = stat.maxArmor;
         }
 
         refreshscreen();
     }
 
-    public void refreshscreen() {
-        shotgunAmmoText.text = ShotgunAmmo + "";
-        gunAmmoText.text = GunAmmo + "";
-        textVie.text = (health * 100) / maxHealth + "%";
-        textArmor.text = (armor * 100) / maxArmor + "%";
-        gunAmmoMaxText.text = GunAmmoMax + "";
-        shotgunAmmoMaxText.text = ShotgunAmmoMax + "";
+    //Ajout de vie
+    public void AddHealth(int value)
+    {
+        stat.health += value;
+        if (stat.health > stat.maxHealth)
+        {
+            stat.health = stat.maxHealth;
+        }
+
+        refreshscreen();
     }
+
+    //Actualise le UI
+    public void refreshscreen() {
+        shotgunAmmoText.text = stat.ShotgunAmmo + "";
+        gunAmmoText.text = stat.GunAmmo + "";
+        textVie.text = (stat.health * 100) / stat.maxHealth + "%";
+        textArmor.text = (stat.armor * 100) / stat.maxArmor + "%";
+        gunAmmoMaxText.text = stat.GunAmmoMax + "";
+        shotgunAmmoMaxText.text = stat.ShotgunAmmoMax + "";
+    }
+}
+
+//Stat du joueur
+[System.Serializable]
+public class Stat
+{
+    public int health;
+    public int armor;
+    public int maxHealth = 100;
+    public int maxArmor = 100;
+    public int ShotgunAmmo;
+    public int GunAmmo;
+    public int ShotgunAmmoMax = 50;
+    public int GunAmmoMax = 10000;
 }

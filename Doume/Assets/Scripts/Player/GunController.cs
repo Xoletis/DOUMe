@@ -88,6 +88,7 @@ public class GunController : MonoBehaviour
         }
     }
 
+    //Recharge de l'arme actuelle
     private void ReloadAmmo()
     {
         if (inventory.GetMunition() > 0 && weapon.munitions != weapon.maxMunitions)
@@ -100,12 +101,14 @@ public class GunController : MonoBehaviour
         }
     }
 
+    //Changement d'arme
     public void changeWeapon()
     {
         weapon = inventory.GetWeapon();
         weaponImage.sprite = weapon.Image;
     }
 
+    //temps de rechargement
     IEnumerator reloadTime()
     {
         canFire = false;

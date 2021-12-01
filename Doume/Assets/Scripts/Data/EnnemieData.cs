@@ -25,7 +25,8 @@ public class EnnemieData : ScriptableObject
     public GameObject bullet; 
 }
 
-/*[CustomEditor(typeof(EnnemieData))]
+//Modifier l'insepcteur pour cahcer les données non utiles
+[CustomEditor(typeof(EnnemieData))]
 public class MyScriptEditor : Editor
 {
 
@@ -49,4 +50,4 @@ public class MyScriptEditor : Editor
         }
         serializedObject.ApplyModifiedProperties();
     }
-}*/
+}

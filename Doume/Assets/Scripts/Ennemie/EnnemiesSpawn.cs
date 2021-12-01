@@ -17,6 +17,7 @@ public class EnnemiesSpawn : MonoBehaviour
         nbEnnemies = spawners.Length;
     }
 
+    //On fait spawn l'ennemie au spawner actuelle
     public void SpawnEnnemies()
     {
         int ennemiesIndex = Random.Range(0, ennemies.Length);
@@ -27,6 +28,7 @@ public class EnnemiesSpawn : MonoBehaviour
         activateAi.ennemies.Add(ennemy);
     }
 
+    //on lance le spawne des ennemies
     public void LaunchEnnemiesSpawn()
     {
 
