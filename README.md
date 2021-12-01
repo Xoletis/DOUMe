@@ -1,6 +1,6 @@
-<strong>Relese 1.3.2</strong>
+<strong><h1>Relese 1.3.2</h1></strong>
 
-* Ajout d'un systeme de sauvgard sur fichier JSON
-* Optimisation de l'IA
-* Code Commanter
-* Modification de l'heritage des ennemies
+<li>Ajout d'un systeme de sauvgard sur fichier JSON</li>
+<li>Optimisation de l'IA</li>
+<li>Code Commanter</li>
+<li>Modification de l'heritage des ennemies</li>
