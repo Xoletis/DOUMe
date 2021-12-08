@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
-
+    public Animator Animator;
     public WeaponStats[] allWeapons;
     private WeaponStats weapon;
     private int i = 0;
@@ -59,6 +59,7 @@ public class PlayerInventory : MonoBehaviour
             weapon = allWeapons[i];
             gunController.changeWeapon();
         }
+        Animator.SetFloat("hp",stat.health);
     }
 
     // Le joueur perd des points de vie / d'armure
@@ -71,7 +72,10 @@ public class PlayerInventory : MonoBehaviour
             stat.health -= (damage - stat.armor);
             stat.armor = 0;
         }
+        Animator.SetTrigger("takedamage");
+
         refreshscreen();
+
     }
 
     // Le joueur est-il mort ?
@@ -80,13 +84,13 @@ public class PlayerInventory : MonoBehaviour
         return stat.health <= 0;
     }
 
-    //on récupére l'arme actuelle
+    //on rï¿½cupï¿½re l'arme actuelle
     public WeaponStats GetWeapon()
     {
         return weapon;
     }
 
-    //On récupere le nombre de munition actuelle
+    //On rï¿½cupere le nombre de munition actuelle
     public int GetMunition()
     {
         if(weapon.ammoType == WeaponStats.AmmoType.shotgun)

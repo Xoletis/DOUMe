@@ -3,13 +3,15 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
-    //La caméra
+    public Animator Animator;
+
+    //La camï¿½ra
     private Camera fpsCam;
 
-    //Float : mémorise le temps du prochain tir possible
+    //Float : mï¿½morise le temps du prochain tir possible
     private float nextFire;
 
-    //Détermine sur quel Layer on peut tirer
+    //Dï¿½termine sur quel Layer on peut tirer
     public LayerMask mask;
 
     private PlayerInventory inventory;
@@ -51,33 +53,34 @@ public class GunController : MonoBehaviour
 
         }
 
-        // Vérifie si le joueur a pressé le bouton pour faire feu (bouton gauche de la souris)
-        // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
+        // Vï¿½rifie si le joueur a pressï¿½ le bouton pour faire feu (bouton gauche de la souris)
+        // Time.time > nextFire : vï¿½rifie si suffisament de temps s'est ï¿½coulï¿½ pour pouvoir tirer ï¿½ nouveau
         if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0 && canFire)
         {
+            Animator.SetTrigger("pan");
 
             weapon.munitions--;
 
-            //Met à jour le temps pour le prochain tir
-            //Time.time = Temps écoulé depuis le lancement du jeu
-            //temps du prochain tir = temps total écoulé + temps qu'il faut attendre
+            //Met ï¿½ jour le temps pour le prochain tir
+            //Time.time = Temps ï¿½coulï¿½ depuis le lancement du jeu
+            //temps du prochain tir = temps total ï¿½coulï¿½ + temps qu'il faut attendre
             nextFire = Time.time + weapon.fireRate;
 
             //On va lancer un rayon invisible qui simulera les balles du gun
 
-            //Crée un vecteur au centre de la vue de la caméra
+            //Crï¿½e un vecteur au centre de la vue de la camï¿½ra
             Vector3 rayOrigin = fpsCam.transform.position;
 
-            //RaycastHit : permet de savoir ce que le rayon a touché
+            //RaycastHit : permet de savoir ce que le rayon a touchï¿½
             RaycastHit hit;
 
-            // Vérifie si le raycast a touché quelque chose
+            // Vï¿½rifie si le raycast a touchï¿½ quelque chose
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, weapon.wpnRange, mask))
             {
                 Debug.Log(hit.collider.name);
                 if (hit.transform.tag == "ExplosiveBarrel")
                 {
-                    Debug.Log("Barrel Touché !");
+                    Debug.Log("Barrel Touchï¿½ !");
                     hit.transform.GetComponent<ExplosiveBarrel>().Explode();
                 }
                 else
@@ -106,6 +109,8 @@ public class GunController : MonoBehaviour
     {
         weapon = inventory.GetWeapon();
         weaponImage.sprite = weapon.Image;
+        Animator.SetTrigger("switchweapon");
+
     }
 
     //temps de rechargement
