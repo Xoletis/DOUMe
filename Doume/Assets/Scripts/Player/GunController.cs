@@ -83,6 +83,11 @@ public class GunController : MonoBehaviour
                     Debug.Log("Barrel Touch� !");
                     hit.transform.GetComponent<ExplosiveBarrel>().Explode();
                 }
+                else if(hit.transform.tag == "obama"){
+                    
+                    hit.transform.GetComponent<obama>().surprise(hit.transform.tag);
+                    
+                }
                 else
                 {
                     hit.collider.gameObject.SendMessage(enemieDamageFunction, weapon.wpnDmg);
