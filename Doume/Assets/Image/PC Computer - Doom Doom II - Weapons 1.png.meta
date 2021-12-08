@@ -692,6 +692,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -700,12 +701,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 1
     aniso: 1
-    mipBias: -100
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -723,9 +724,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -756,27 +760,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PC Computer - Doom Doom II - Weapons 1_67
-      rect:
-        serializedVersion: 2
-        x: 1184
-        y: 437
-        width: 41
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1ad396da044a1b70800000000000000
-      internalID: 8870477229399988763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PC Computer - Doom Doom II - Weapons 1_79
       rect:
         serializedVersion: 2
@@ -804,7 +787,7 @@ TextureImporter:
         x: 1359
         y: 351
         width: 78
-        height: 103
+        height: 116
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -846,7 +829,7 @@ TextureImporter:
         x: 1146
         y: 351
         width: 79
-        height: 82
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -888,7 +871,7 @@ TextureImporter:
         x: 1296
         y: 351
         width: 61
-        height: 81
+        height: 78
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -927,10 +910,10 @@ TextureImporter:
       name: PC Computer - Doom Doom II - Weapons 1_115
       rect:
         serializedVersion: 2
-        x: 235
-        y: 304
-        width: 44
-        height: 31
+        x: 141
+        y: 253
+        width: 75
+        height: 76
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -948,10 +931,10 @@ TextureImporter:
       name: PC Computer - Doom Doom II - Weapons 1_116
       rect:
         serializedVersion: 2
-        x: 282
-        y: 304
-        width: 54
-        height: 44
+        x: 3
+        y: 227
+        width: 119
+        height: 109
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1095,8 +1078,8 @@ TextureImporter:
       name: PC Computer - Doom Doom II - Weapons 1_135
       rect:
         serializedVersion: 2
-        x: 135
-        y: 243
+        x: 346
+        y: 161
         width: 63
         height: 12
       alignment: 0
@@ -1242,10 +1225,10 @@ TextureImporter:
       name: PC Computer - Doom Doom II - Weapons 1_142
       rect:
         serializedVersion: 2
-        x: 135
-        y: 180
-        width: 79
-        height: 60
+        x: 132
+        y: 189
+        width: 82
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1305,10 +1288,10 @@ TextureImporter:
       name: PC Computer - Doom Doom II - Weapons 1_153
       rect:
         serializedVersion: 2
-        x: 105
+        x: 278
         y: 152
         width: 54
-        height: 16
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1368,10 +1351,10 @@ TextureImporter:
       name: PC Computer - Doom Doom II - Weapons 1_191
       rect:
         serializedVersion: 2
-        x: 30
-        y: 102
-        width: 86
-        height: 46
+        x: 0
+        y: 101
+        width: 116
+        height: 109
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1389,10 +1372,10 @@ TextureImporter:
       name: PC Computer - Doom Doom II - Weapons 1_192
       rect:
         serializedVersion: 2
-        x: 149
+        x: 135
         y: 102
-        width: 85
-        height: 47
+        width: 79
+        height: 84
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
