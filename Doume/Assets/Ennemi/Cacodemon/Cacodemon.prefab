@@ -88,7 +88,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2839353334857473242, guid: ced695f0be6eaf647a24cf8108a727f1, type: 3}
       propertyPath: m_Name
-      value: RangeEnnemie
+      value: Cacodemon
       objectReference: {fileID: 0}
     - target: {fileID: 2839353334857473243, guid: ced695f0be6eaf647a24cf8108a727f1, type: 3}
       propertyPath: m_Height
@@ -103,6 +103,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e155fde705824784c91a4216949535ad, type: 2}
     - target: {fileID: 2839353334857473244, guid: ced695f0be6eaf647a24cf8108a727f1, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1197614835928716956}
+    - target: {fileID: 2839353334857473244, guid: ced695f0be6eaf647a24cf8108a727f1, type: 3}
       propertyPath: spawnBullet
       value: 
       objectReference: {fileID: 7289574892612778869}
@@ -112,15 +116,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2839353334857473247, guid: ced695f0be6eaf647a24cf8108a727f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.728753
+      value: 86.48472
       objectReference: {fileID: 0}
     - target: {fileID: 2839353334857473247, guid: ced695f0be6eaf647a24cf8108a727f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4
+      value: 2.37
       objectReference: {fileID: 0}
     - target: {fileID: 2839353334857473247, guid: ced695f0be6eaf647a24cf8108a727f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.8237991
+      value: 10.351479
       objectReference: {fileID: 0}
     - target: {fileID: 2839353334857473247, guid: ced695f0be6eaf647a24cf8108a727f1, type: 3}
       propertyPath: m_LocalRotation.w

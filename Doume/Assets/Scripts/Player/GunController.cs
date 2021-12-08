@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
+    public Animator Animator;
+
     //La caméra
     private Camera fpsCam;
+    private AudioManager audioManager;
 
     //Float : mémorise le temps du prochain tir possible
     private float nextFire;
@@ -30,6 +33,7 @@ public class GunController : MonoBehaviour
 
         weapon = inventory.GetWeapon();
         weaponImage.sprite = weapon.Image;
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -55,7 +59,8 @@ public class GunController : MonoBehaviour
         // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
         if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0 && canFire)
         {
-
+            audioManager.Play(weapon.firingSound);
+            Animator.SetTrigger("pan");
             weapon.munitions--;
 
             //Met à jour le temps pour le prochain tir
@@ -104,6 +109,7 @@ public class GunController : MonoBehaviour
     //Changement d'arme
     public void changeWeapon()
     {
+        Animator.SetTrigger("switchweapon");
         weapon = inventory.GetWeapon();
         weaponImage.sprite = weapon.Image;
     }
@@ -111,6 +117,7 @@ public class GunController : MonoBehaviour
     //temps de rechargement
     IEnumerator reloadTime()
     {
+        audioManager.Play(weapon.reloadSound);
         canFire = false;
         weaponImage.enabled = false;
         yield return new WaitForSeconds(weapon.reaoldTime);

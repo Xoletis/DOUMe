@@ -33,7 +33,7 @@ public class UpDifficulty : MonoBehaviour
         }
     }
 
-    private void OnApplicationQuit()
+    /*private void OnApplicationQuit()
     {
         foreach (EnnemieData data in ennemieDatas)
         {
@@ -44,5 +44,5 @@ public class UpDifficulty : MonoBehaviour
             data.attackRange -= attackAeraMultyplier * lvl;
             data.attackCouldown += attackSpeedMuliplier * lvl;
         }
-    }
+    }*/
 }

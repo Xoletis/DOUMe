@@ -234,6 +234,7 @@ MonoBehaviour:
   gunAmmoText: {fileID: 0}
   shotgunAmmoMaxText: {fileID: 0}
   gunAmmoMaxText: {fileID: 0}
+  v: {fileID: 0}
 --- !u!143 &1380864147705895574
 CharacterController:
   m_ObjectHideFlags: 0

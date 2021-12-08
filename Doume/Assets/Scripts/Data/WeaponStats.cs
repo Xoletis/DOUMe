@@ -16,4 +16,6 @@ public class WeaponStats : ScriptableObject
     public float reaoldTime = 2f;
     public Sprite Image;
     public AmmoType ammoType;
+    public string firingSound;
+    public string reloadSound;
 }

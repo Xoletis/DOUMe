@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -20,6 +22,10 @@ public class PlayerInventory : MonoBehaviour
     public Text shotgunAmmoMaxText;
     public Text gunAmmoMaxText;
 
+
+    public Volume v;
+    private Vignette vg;
+
     private void Awake()
     {
         for (int i = 0; i < allWeapons.Length; i++)
@@ -27,11 +33,15 @@ public class PlayerInventory : MonoBehaviour
             allWeapons[i].munitions = allWeapons[i].maxMunitions;
         }
 
+        PlayerPrefs.SetInt("Score", 0);
+
         weapon = allWeapons[0];
         stat.health = stat.maxHealth;
         stat.GunAmmo = stat.GunAmmoMax;
         stat.ShotgunAmmo = stat.ShotgunAmmoMax;
         refreshscreen();
+        v.profile.TryGet(out vg);
+        LeftHealth();
     }
 
     // Start is called before the first frame update
@@ -45,17 +55,10 @@ public class PlayerInventory : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("a") || Input.GetAxis("Mouse ScrollWheel") > 0f)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f || Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             i--;
             if (i < 0) i = allWeapons.Length - 1;
-            weapon = allWeapons[i];
-            gunController.changeWeapon();
-        }
-        if (Input.GetKeyDown("e") || Input.GetAxis("Mouse ScrollWheel") < 0f)
-        {
-            i++;
-            if (i >= allWeapons.Length) i = 0;
             weapon = allWeapons[i];
             gunController.changeWeapon();
         }
@@ -71,6 +74,7 @@ public class PlayerInventory : MonoBehaviour
             stat.health -= (damage - stat.armor);
             stat.armor = 0;
         }
+        LeftHealth();
         refreshscreen();
     }
 
@@ -172,7 +176,7 @@ public class PlayerInventory : MonoBehaviour
         {
             stat.health = stat.maxHealth;
         }
-
+        LeftHealth();
         refreshscreen();
     }
 
@@ -184,6 +188,30 @@ public class PlayerInventory : MonoBehaviour
         textArmor.text = (stat.armor * 100) / stat.maxArmor + "%";
         gunAmmoMaxText.text = stat.GunAmmoMax + "";
         shotgunAmmoMaxText.text = stat.ShotgunAmmoMax + "";
+    }
+
+    public void LeftHealth()
+    {
+        if (stat.health <= 100)
+        {
+            vg.intensity.value = 0.5f;
+        }
+        if (stat.health <= 80)
+        {
+            vg.intensity.value = 0.6f;
+        }
+        if (stat.health <= 60)
+        {
+            vg.intensity.value = 0.7f;
+        }
+        if (stat.health <= 40)
+        {
+            vg.intensity.value = 0.8f;
+        }
+        if (stat.health <= 20)
+        {
+            vg.intensity.value = 0.9f;
+        }
     }
 }
 

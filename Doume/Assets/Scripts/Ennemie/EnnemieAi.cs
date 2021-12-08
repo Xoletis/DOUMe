@@ -46,7 +46,8 @@ public class EnnemieAi : MonoBehaviour
         agent.speed = data.speed;
         health = data.health;
         attackCouldown = data.attackCouldown;
-        door.AddEnnemy();
+        if(door != null)
+            door.AddEnnemy();
         animator = GetComponent<Animator>();
     }
 
@@ -144,7 +145,8 @@ public class EnnemieAi : MonoBehaviour
     public void Death()
     {
         //on enléve un ennemei de la sale
-        door.DestroyEnnemy();
+        if(door != null)
+            door.DestroyEnnemy();
         //on instantie les particules de sang
         Instantiate(blood, transform.position, Quaternion.identity);
         //Drop du loot alléatoire
@@ -159,9 +161,10 @@ public class EnnemieAi : MonoBehaviour
                 }
             }
 
-            int dropObject = Random.Range(0, objetToDrop.Capacity);
+            int dropObject = Random.Range(0, objetToDrop.Count);
             Instantiate(objetToDrop[dropObject], transform.position, Quaternion.identity);
         }
+
         Destroy(gameObject);
     }
 

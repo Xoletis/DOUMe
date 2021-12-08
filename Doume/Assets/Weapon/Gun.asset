@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1452ef2775dd99438a7b1a7e4b0cc18, type: 3}
   m_Name: Gun
   m_EditorClassIdentifier: 
-  wpnDmg: 50
+  wpnDmg: 10000
   fireRate: 0.25
   wpnRange: 1000
-  munitions: 48
+  munitions: 49
   maxMunitions: 50
   reaoldTime: 1
   Image: {fileID: -8813127811016433707, guid: d253c902daf15624bad45e8d9d4012b8, type: 3}
   ammoType: 1
+  firingSound: pistol_&_chaingun_&_zombieman_attack
+  reloadSound: pistol_&_chaingun_&_zombieman_attack

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    [SerializeField]
     public Sound[] sounds;
-    
+
     [HideInInspector]
     public Sound CurrentSound;
 
@@ -35,8 +36,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play (string name)
+    public void Play(string name)
     {
+
         Sound s = Array.Find(sounds, sound => sound.name == name);
         CurrentSound = s;
         if (s == null)
@@ -44,7 +46,9 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound : " + name + " not found");
             return;
         }
-        s.source.Play();
+        Debug.Log(name);
+        if (s.source.isPlaying == false)
+            s.source.Play();
     }
 
     public void Play(int index)

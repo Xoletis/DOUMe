@@ -163,7 +163,7 @@ MonoBehaviour:
     chance: 5
   door: {fileID: 0}
   spawnBullet: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 110974817526826861}
 --- !u!65 &1476639875790724023
 BoxCollider:
   m_ObjectHideFlags: 0

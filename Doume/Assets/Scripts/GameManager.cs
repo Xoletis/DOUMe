@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.M))
             {
-                score += 20;
+                AddScore(20);
             }
         }
     }
@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
     public void AddScore(int scoreToAdd)
     {
         score += scoreToAdd;
+        PlayerPrefs.SetInt("Score", score);
     }
 
     public int GetScore()

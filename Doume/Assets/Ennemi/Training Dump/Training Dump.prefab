@@ -158,24 +158,25 @@ MonoBehaviour:
   attackCouldown: 0
   health: 0
   blood: {fileID: 5532776379459391, guid: 8665e308e8b72e841bae7f815f8905ee, type: 3}
+  isInvicible: 0
   DropList:
   - DropObject: {fileID: 8613227832618555860, guid: 633179686391b2d4c91a295926c6d981, type: 3}
     chance: 10
-  - DropObject: {fileID: 6410204036386258931, guid: 14101aef3bea0a443b1ad72046d307a1, type: 3}
+  - DropObject: {fileID: 8613227832618555860, guid: 633179686391b2d4c91a295926c6d981, type: 3}
     chance: 30
-  - DropObject: {fileID: 7338103049424040430, guid: 83413372de7968649aa1b6aa01571dfe, type: 3}
-    chance: 20
-  - DropObject: {fileID: 5715166096592656514, guid: 8c1302ec4de1b0b4da7ea6a31b6fbf4a, type: 3}
-    chance: 10
-  - DropObject: {fileID: 4421121948209567079, guid: 6491dd79666918140bd594efceea21d3, type: 3}
-    chance: 5
   - DropObject: {fileID: 6518939505438168342, guid: 59c6d412355859a45960ecd1d2afaba7, type: 3}
     chance: 20
-  - DropObject: {fileID: 4434910948905652384, guid: cd9f9fdf7791f9c44a705d8fd9ec2cd8, type: 3}
+  - DropObject: {fileID: 3485712381945296717, guid: 1d65c5ccdec87da428cf4e7fe81a1835, type: 3}
+    chance: 10
+  - DropObject: {fileID: 2538119392821309767, guid: d456e176f4ce42c40a0c73ed70abd73b, type: 3}
+    chance: 5
+  - DropObject: {fileID: 1914129203055161695, guid: 94b83a369728eee4f951e9274387c541, type: 3}
+    chance: 20
+  - DropObject: {fileID: 4364823103117371750, guid: 0a3a045ed74bae343b1f77a82042f060, type: 3}
     chance: 30
-  - DropObject: {fileID: 6312009940695368139, guid: 8470c9d9f8955844bbf22957f9e1b908, type: 3}
-    chance: 25
-  - DropObject: {fileID: 2544941459954363055, guid: db48df904ade3954c818b397482edede, type: 3}
+  - DropObject: {fileID: 7615815648033552842, guid: ba1481ae5649d5d48bcaede951cd3015, type: 3}
+    chance: 50
+  - DropObject: {fileID: 8777054046383196614, guid: f69f59613f194e9449f44a8c67815fe8, type: 3}
     chance: 20
   - DropObject: {fileID: 3662109585593946409, guid: ba379628e3f99bc4f90c84a7480c4965, type: 3}
     chance: 15
@@ -183,7 +184,13 @@ MonoBehaviour:
     chance: 10
   - DropObject: {fileID: 3579191819305129098, guid: 795f25b11cf9c7b48925687dddacb524, type: 3}
     chance: 5
+  - DropObject: {fileID: 4434910948905652384, guid: cd9f9fdf7791f9c44a705d8fd9ec2cd8, type: 3}
+    chance: 50
+  - DropObject: {fileID: 6312009940695368139, guid: 8470c9d9f8955844bbf22957f9e1b908, type: 3}
+    chance: 20
   door: {fileID: 0}
+  spawnBullet: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!65 &2578064499227496948
 BoxCollider:
   m_ObjectHideFlags: 0
