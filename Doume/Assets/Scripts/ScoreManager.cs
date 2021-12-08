@@ -17,7 +17,8 @@ public class ScoreManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        score = GameManager.instance.GetScore();
+        if (GameManager.instance != null)
+            score = GameManager.instance.GetScore();
         highscore = PlayerPrefs.GetInt("Highscore");
 
         if (score > highscore)
@@ -26,7 +27,7 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt("Highscore", score);
         }
 
-        scoreText.text = "Score : " + score.ToString();
-        highscoreText.text = "Highscore : " + highscore.ToString();
+        scoreText.text = " Score : " + score.ToString();
+        highscoreText.text = " Highscore : " + highscore.ToString();
     }
 }
