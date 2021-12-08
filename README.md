@@ -1,6 +1,6 @@
-<strong><h1>Relese 1.3.2</h1></strong>
+<strong><h1>Relese 1.4.0</h1></strong>
 
-<li>Ajout d'un systeme de sauvgard sur fichier JSON</li>
-<li>Optimisation de l'IA</li>
-<li>Code Commanter</li>
-<li>Modification de l'heritage des ennemies</li>
+<li>Nouvelle map</li>
+<li>Ajout 4 nouveaux ennemies</li>
+<li>Post processing</li>
+<li>Anti-aliasing + V-sync</li>
