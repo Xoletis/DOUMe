@@ -26,12 +26,14 @@ public class DestroyRandomDoor : MonoBehaviour
         ennemies--;
         //si il n'y a plus d'ennemeie dans la sale on supprime une porte alléatoire.
         if (ennemies <= 0)
+        {
 
             ennemies = 0;
-        if (isDestroyed == false)
-        {
-            doors[doorRandom].GetComponent<spawnNextRoom>().spawnNextEnnemy();
-            isDestroyed = !isDestroyed;
+            if (isDestroyed == false)
+            {
+                doors[doorRandom].GetComponent<spawnNextRoom>().spawnNextEnnemy();
+                isDestroyed = !isDestroyed;
+            }
         }
     }
 }

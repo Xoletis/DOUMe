@@ -27,10 +27,16 @@ public class EnnemieAi : MonoBehaviour
     public float health;
     public GameObject blood;
 
+    public bool isInvicible = false;
+
     [SerializeField]
     public item[] DropList;
 
     public DestroyRandomDoor door;
+
+    public Transform spawnBullet;
+
+    public Animator animator;
 
     void Start()
     {
@@ -41,56 +47,50 @@ public class EnnemieAi : MonoBehaviour
         health = data.health;
         attackCouldown = data.attackCouldown;
         door.AddEnnemy();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        //verifie si le joueur est à portée de chasse
-        if (PlayerDetected())
+        if (!isInvicible)
         {
-            //verifie si le joueur est à portée d'attaque
-            if (Vector3.Distance(transform.position, Player.transform.position) <= data.attackRange)
+            //verifie si le joueur est à portée de chasse
+            if (PlayerDetected())
             {
-                //attaque si le couldown est fini
-                if(attackCouldown <= 0.0f)
+                //verifie si le joueur est à portée d'attaque
+                if (Vector3.Distance(transform.position, Player.transform.position) <= data.attackRange)
                 {
-                    //Si a distance on tire sinon on attack
-                    if (data.isRangeEnnemie)
+                    //attaque si le couldown est fini
+                    if (attackCouldown <= 0.0f)
                     {
-                        Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
-                        Vector3 dir = (playerPos - transform.position).normalized;
-                        Vector3 vector = new Vector3(0, 0, 2f) + dir;
-                        
-                        GameObject bullet = Instantiate(data.bullet, transform.position, Quaternion.identity);
-                        bullet.GetComponent<Bullet>().damage = data.damage;
-                        bullet.GetComponent<Bullet>().playerDamageFonctionName = playerDamageFonctionName;
-                        
+                        //Si a distance on tire sinon on attack
+                        animator.SetTrigger("Attaque");
+                        attackCouldown = data.attackCouldown;
                     }
                     else
                     {
-                        Player.SendMessage(playerDamageFonctionName, data.damage);
+                        //on baisse le couldown
+                        attackCouldown -= Time.deltaTime;
                     }
-                    attackCouldown = data.attackCouldown;
+
+                    //stop le déplacement
+                    agent.isStopped = true;
                 }
                 else
                 {
-                    //on baisse le couldown
-                    attackCouldown -= Time.deltaTime;
+                    //lance le déplacement
+                    agent.isStopped = false;
+                    agent.destination = Player.transform.position;
                 }
-
-                //stop le déplacement
-                agent.isStopped = true;
             }
             else
             {
-                //lance le déplacement
-                agent.isStopped = false;
-                agent.destination = Player.transform.position;
+                //stop le déplacement
+                agent.isStopped = true;
             }
         }
         else
         {
-            //stop le déplacement
             agent.isStopped = true;
         }
     }
@@ -123,15 +123,21 @@ public class EnnemieAi : MonoBehaviour
     //prendre des dommages
     public void TakeDamage(float damage)
     {
-        Debug.Log("Touché");
-        health -= damage;
-        //on instantie les particules de sang
-        Instantiate(blood, transform.position, Quaternion.identity);
-
-        //mort
-        if (health <= 0)
+        if (!isInvicible)
         {
-            Death();
+            Debug.Log("Touché");
+            health -= damage;
+            //on instantie les particules de sang
+            Instantiate(blood, transform.position, Quaternion.identity);
+
+            //mort
+            if (health <= 0)
+            {
+                if (animator != null)
+                    animator.SetTrigger("Death");
+                else
+                    Death();
+            }
         }
     }
 
@@ -157,5 +163,34 @@ public class EnnemieAi : MonoBehaviour
             Instantiate(objetToDrop[dropObject], transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
+    }
+
+    public void invincible()
+    {
+        isInvicible = true;
+    }
+
+    public void RangedAttack()
+    {
+        Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        Vector3 dir = (playerPos - transform.position).normalized;
+        Vector3 vector = new Vector3(0, 0, 2f) + dir;
+
+        GameObject bullet = Instantiate(data.bullet, spawnBullet.position, Quaternion.identity);
+        bullet.GetComponent<Bullet>().damage = data.damage;
+        bullet.GetComponent<Bullet>().playerDamageFonctionName = playerDamageFonctionName;
+    }
+
+    public void AttackContact()
+    {
+        Player.SendMessage(playerDamageFonctionName, data.damage);
+    }
+
+    public void Explose()
+    {
+        if (PlayerDetected())
+        {
+            Player.SendMessage(playerDamageFonctionName, data.damage * 2);
+        }
     }
 }
