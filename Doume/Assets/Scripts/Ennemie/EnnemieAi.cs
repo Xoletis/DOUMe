@@ -26,6 +26,7 @@ public class EnnemieAi : MonoBehaviour
     [SerializeField]
     public float health;
     public GameObject blood;
+    public AudioSource source;
 
     public bool isInvicible = false;
 
@@ -45,10 +46,11 @@ public class EnnemieAi : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed = data.speed;
         health = data.health;
-        attackCouldown = data.attackCouldown;
+        attackCouldown = 0;
         if(door != null)
             door.AddEnnemy();
         animator = GetComponent<Animator>();
+        StartCoroutine(sound());
     }
 
     void Update()
@@ -129,7 +131,7 @@ public class EnnemieAi : MonoBehaviour
             Debug.Log("Touché");
             health -= damage;
             //on instantie les particules de sang
-            Instantiate(blood, transform.position, Quaternion.identity);
+            SetBlood();
 
             //mort
             if (health <= 0)
@@ -148,7 +150,7 @@ public class EnnemieAi : MonoBehaviour
         if(door != null)
             door.DestroyEnnemy();
         //on instantie les particules de sang
-        Instantiate(blood, transform.position, Quaternion.identity);
+        SetBlood();
         //Drop du loot alléatoire
         if (Random.Range(0, 100) < data.droopRate)
         {
@@ -175,6 +177,8 @@ public class EnnemieAi : MonoBehaviour
 
     public void RangedAttack()
     {
+        source.clip = data.attackSound;
+        source.Play();
         Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
         Vector3 dir = (playerPos - transform.position).normalized;
         Vector3 vector = new Vector3(0, 0, 2f) + dir;
@@ -186,14 +190,49 @@ public class EnnemieAi : MonoBehaviour
 
     public void AttackContact()
     {
+        source.clip = data.attackSound;
+        source.Play();
         Player.SendMessage(playerDamageFonctionName, data.damage);
     }
 
-    public void Explose()
+    public void Explose(int damage)
     {
         if (PlayerDetected())
         {
-            Player.SendMessage(playerDamageFonctionName, data.damage * 2);
+            Player.SendMessage(playerDamageFonctionName, damage);
+        }
+    }
+
+    public void SetBlood()
+    {
+        Instantiate(blood, transform.position, Quaternion.identity);
+    }
+
+    public void Flash()
+    {
+        Player.GetComponent<PlayerInventory>().WhitFlash();
+    }
+
+    public void Ralentisement()
+    {
+        Player.GetComponent<PlayerInventory>().Ralatie();
+    }
+
+    IEnumerator sound()
+    {
+        int m = Random.Range(0, 4);
+        yield return new WaitForSeconds(m);
+        while (true){
+            yield return new WaitForSeconds(1);
+            int n = Random.Range(0, 5);
+            if (n == 0)
+            {
+                if (source != null)
+                {
+                    source.clip = data.natuarlSound;
+                    source.Play();
+                }
+            }
         }
     }
 }

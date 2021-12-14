@@ -4,6 +4,7 @@ using UnityEngine;
 public class GunController : MonoBehaviour
 {
     public Animator Animator;
+    public AudioSource source;
 
     //La caméra
     private Camera fpsCam;
@@ -34,6 +35,7 @@ public class GunController : MonoBehaviour
         weapon = inventory.GetWeapon();
         weaponImage.sprite = weapon.Image;
         audioManager = FindObjectOfType<AudioManager>();
+        Animator.SetInteger("Ammo", weapon.munitions);
     }
 
     // Update is called once per frame
@@ -59,7 +61,8 @@ public class GunController : MonoBehaviour
         // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
         if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0 && canFire)
         {
-            audioManager.Play(weapon.firingSound);
+            source.clip = weapon.firingSound;
+            source.Play();
             Animator.SetTrigger("pan");
             weapon.munitions--;
 
@@ -85,11 +88,18 @@ public class GunController : MonoBehaviour
                     Debug.Log("Barrel Touché !");
                     hit.transform.GetComponent<ExplosiveBarrel>().Explode();
                 }
+                else if (hit.transform.tag == "obama")
+                {
+
+                    hit.transform.GetComponent<obama>().surprise(hit.transform.tag);
+
+                }
                 else
                 {
                     hit.collider.gameObject.SendMessage(enemieDamageFunction, weapon.wpnDmg);
                 }
             }
+            Animator.SetInteger("Ammo", weapon.munitions);
         }
     }
 
@@ -117,7 +127,8 @@ public class GunController : MonoBehaviour
     //temps de rechargement
     IEnumerator reloadTime()
     {
-        audioManager.Play(weapon.reloadSound);
+        source.clip = weapon.reloadSound;
+        source.Play();
         canFire = false;
         weaponImage.enabled = false;
         yield return new WaitForSeconds(weapon.reaoldTime);
@@ -135,5 +146,6 @@ public class GunController : MonoBehaviour
         Debug.Log("munitions remplies !");
         canFire = true;
         weaponImage.enabled = true;
+        Animator.SetInteger("Ammo", weapon.munitions);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class refillController : MonoBehaviour
 {
-    public enum Type { AllAmmo, Gun, Shotgun, Armor, Health }
+    public enum Type { AllAmmo, Gun, Shotgun, Energy, Armor, Health, HealthInTime, MaxHealth }
     public Type typeToRefill;
 
 
@@ -23,9 +23,15 @@ public class refillController : MonoBehaviour
                     break;
                 case Type.Shotgun: other.gameObject.GetComponent<PlayerInventory>().AddShotgunAmmo(nbToAdd);
                     break;
+                case Type.Energy: other.gameObject.GetComponent<PlayerInventory>().AddEnergyAmmo(nbToAdd);
+                    break;
                 case Type.Armor: other.gameObject.GetComponent<PlayerInventory>().AddArmor(nbToAdd);
                     break;
                 case Type.Health: other.gameObject.GetComponent<PlayerInventory>().AddHealth(nbToAdd);
+                    break;
+                case Type.HealthInTime: other.gameObject.GetComponent<PlayerInventory>().TimeHealing(nbToAdd);
+                    break;
+                case Type.MaxHealth: other.gameObject.GetComponent<PlayerInventory>().AddMaxHealth(nbToAdd);
                     break;
             }
             Debug.Log("Collison détectée");

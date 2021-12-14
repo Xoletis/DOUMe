@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1452ef2775dd99438a7b1a7e4b0cc18, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
+  nom: Shotgun
   wpnDmg: 100
   fireRate: 1
   wpnRange: 1000
@@ -20,3 +21,5 @@ MonoBehaviour:
   reaoldTime: 2
   Image: {fileID: -2228459967888705166, guid: d253c902daf15624bad45e8d9d4012b8, type: 3}
   ammoType: 0
+  firingSound: {fileID: 8300000, guid: d3dfaa86afa39624c9d7af19f35a6da0, type: 3}
+  reloadSound: {fileID: 8300000, guid: a276a11dfdba8054e9f4e2265e69fd51, type: 3}

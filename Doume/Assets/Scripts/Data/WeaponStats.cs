@@ -5,9 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Weapon", menuName = "My Game/Weapon")]
 public class WeaponStats : ScriptableObject
 {
-    public enum AmmoType { shotgun, gun }
+    public enum AmmoType { shotgun, gun, energy }
 
     //attributes
+    public string nom;
     public int wpnDmg = 1;
     public float fireRate = 0.25f;
     public float wpnRange = 200f;
@@ -16,6 +17,6 @@ public class WeaponStats : ScriptableObject
     public float reaoldTime = 2f;
     public Sprite Image;
     public AmmoType ammoType;
-    public string firingSound;
-    public string reloadSound;
+    public AudioClip firingSound;
+    public AudioClip reloadSound;
 }

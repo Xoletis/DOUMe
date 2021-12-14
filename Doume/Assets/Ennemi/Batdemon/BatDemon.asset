@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b0fa6cc11389b46b3b0b2ba966e83c, type: 3}
+  m_Name: BatDemon
+  m_EditorClassIdentifier: 
+  health: 210
+  damage: 5
+  speed: 2.5
+  viewArea: 100
+  attackRange: 10
+  attackCouldown: 10
+  natuarlSound: {fileID: 8300000, guid: 8522e30f239e663418a76f1b955be89b, type: 3}
+  attackSound: {fileID: 8300000, guid: 7e3af7d7158c97347ac64a0cdbdb1805, type: 3}
+  isRangeEnnemie: 1
+  droopRate: 60
+  bullet: {fileID: 6947535345448991744, guid: fc318db02ab807e43a13d781e0728b51, type: 3}

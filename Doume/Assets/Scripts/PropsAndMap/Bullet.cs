@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [HideInInspector]
     public float damage;
     public float TimeBetweenDeath = 2f;
     public float speed = 1000f;
     [HideInInspector]
     public string playerDamageFonctionName;
+    public bool flashing;
+    public bool ralentisement;
+    public bool isBomb;
+    public GameObject ExplosedParticule;
+    public float ExplosedRange;
 
     void Start()
     {
@@ -24,14 +28,54 @@ public class Bullet : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            collision.gameObject.SendMessage(playerDamageFonctionName, damage);
+            
+            if (flashing)
+            {
+                collision.gameObject.SendMessage("WhitFlash");
+            }
+            if (ralentisement)
+            {
+                collision.gameObject.SendMessage("Ralatie");
+            }
+            if (isBomb)
+            {
+                Explosed(collision);
+            }
+            else
+            {
+                collision.gameObject.SendMessage(playerDamageFonctionName, damage);
+            }
             Destroy(gameObject);
         }
+    }
+
+    public void Explosed(Collision collision)
+    {
+        Instantiate(ExplosedParticule, transform.position, Quaternion.identity);
+        if (PlayerDetected())
+        {
+            collision.gameObject.SendMessage(playerDamageFonctionName, damage);
+        }
+        Destroy(gameObject);
     }
 
     IEnumerator timeBeforeDistroy()
     {
         yield return new WaitForSeconds(TimeBetweenDeath);
         Destroy(gameObject);
+    }
+
+    bool PlayerDetected()
+    {
+        Collider[] objects = Physics.OverlapSphere(transform.position, ExplosedRange);
+
+        foreach (Collider col in objects)
+        {
+            if (col.gameObject.CompareTag("Player"))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

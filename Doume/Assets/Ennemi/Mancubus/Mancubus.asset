@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b0fa6cc11389b46b3b0b2ba966e83c, type: 3}
   m_Name: Mancubus
   m_EditorClassIdentifier: 
-  health: 0
-  damage: 0
-  speed: 0
-  viewArea: 0
-  attackRange: 0
-  attackCouldown: 0
-  isRangeEnnemie: 0
-  droopRate: 70
-  bullet: {fileID: 0}
+  health: 500
+  damage: 10
+  speed: 2
+  viewArea: 100
+  attackRange: 10
+  attackCouldown: 20
+  natuarlSound: {fileID: 8300000, guid: 8f9dd8ba0c6bc9b4f80853db0787f9f9, type: 3}
+  attackSound: {fileID: 8300000, guid: f1fa25aff415242498bf4e0031ca44fc, type: 3}
+  isRangeEnnemie: 1
+  droopRate: 100
+  bullet: {fileID: 6947535345448991744, guid: 43689f7fd901ace47ac9a9e088570657, type: 3}
