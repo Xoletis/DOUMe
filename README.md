@@ -5,4 +5,4 @@
 <li>Annimation arme</li>
 <li>Sond arme (à corriger)</li>
 
-<li>https://youtu.be/_0vLc9v655Y</li>
+<li>https://youtu.be/a2d4SCDWzpk</li>
