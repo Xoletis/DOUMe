@@ -23,18 +23,9 @@ public class EnnemieData : ScriptableObject
     [Tooltip("L'ennemie est un ennemie à distance")]
     public bool isRangeEnnemie;
 
-    [Tooltip("Taux de spawn des ennemies vis à vis du niveaux")]
-    public spawnByLevel[] spawnByLevels;
+    public int scoreToAddAtDeath;
 
     public int droopRate = 70;
 
     public GameObject bullet; 
-}
-
-
-[System.Serializable]
-public struct spawnByLevel
-{
-    public int level;
-    public float spawnCount;
 }

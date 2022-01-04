@@ -14,6 +14,12 @@ TextureImporter:
   - first:
       213: 1453293460188629206
     second: hexen_vblade_fire_3
+  - first:
+      213: 3354782229234045971
+    second: hexen_vblade_fire_4
+  - first:
+      213: -8499750054984029164
+    second: hexen_vblade_fire_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -174,7 +180,7 @@ TextureImporter:
         width: 144
         height: 184
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,6 +188,48 @@ TextureImporter:
       bones: []
       spriteID: 6d801f0c3b22b2410800000000000000
       internalID: 1453293460188629206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hexen_vblade_fire_4
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 467
+        width: 143
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314d940c9a49e8e20800000000000000
+      internalID: 3354782229234045971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hexen_vblade_fire_5
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 469
+        width: 207
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ce11dcb52da0a80800000000000000
+      internalID: -8499750054984029164
       vertices: []
       indices: 
       edges: []

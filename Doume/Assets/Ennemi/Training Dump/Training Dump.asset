@@ -18,6 +18,9 @@ MonoBehaviour:
   viewArea: 0
   attackRange: 0
   attackCouldown: 0
+  natuarlSound: {fileID: 0}
+  attackSound: {fileID: 0}
   isRangeEnnemie: 0
+  scoreToAddAtDeath: 2
   droopRate: 100
   bullet: {fileID: 0}

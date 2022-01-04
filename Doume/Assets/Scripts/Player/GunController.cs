@@ -61,45 +61,12 @@ public class GunController : MonoBehaviour
         // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
         if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0 && canFire)
         {
-            source.clip = weapon.firingSound;
-            source.Play();
-            Animator.SetTrigger("pan");
             weapon.munitions--;
-
-            //Met à jour le temps pour le prochain tir
-            //Time.time = Temps écoulé depuis le lancement du jeu
-            //temps du prochain tir = temps total écoulé + temps qu'il faut attendre
-            nextFire = Time.time + weapon.fireRate;
-
-            //On va lancer un rayon invisible qui simulera les balles du gun
-
-            //Crée un vecteur au centre de la vue de la caméra
-            Vector3 rayOrigin = fpsCam.transform.position;
-
-            //RaycastHit : permet de savoir ce que le rayon a touché
-            RaycastHit hit;
-
-            // Vérifie si le raycast a touché quelque chose
-            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, weapon.wpnRange, mask))
-            {
-                Debug.Log(hit.collider.name);
-                if (hit.transform.tag == "ExplosiveBarrel")
-                {
-                    Debug.Log("Barrel Touché !");
-                    hit.transform.GetComponent<ExplosiveBarrel>().Explode();
-                }
-                else if (hit.transform.tag == "obama")
-                {
-
-                    hit.transform.GetComponent<obama>().surprise(hit.transform.tag);
-
-                }
-                else
-                {
-                    hit.collider.gameObject.SendMessage(enemieDamageFunction, weapon.wpnDmg);
-                }
-            }
-            Animator.SetInteger("Ammo", weapon.munitions);
+            attack(weapon.wpnDmg);
+        }
+        else if(Input.GetButton("Fire1") && Time.time > nextFire && weapon.nom == "Sword")
+        {
+            attack(1.0f);
         }
     }
 
@@ -146,6 +113,48 @@ public class GunController : MonoBehaviour
         Debug.Log("munitions remplies !");
         canFire = true;
         weaponImage.enabled = true;
+        Animator.SetInteger("Ammo", weapon.munitions);
+    }
+
+    public void attack(float dammage)
+    {
+        source.clip = weapon.firingSound;
+        source.Play();
+        Animator.SetTrigger("pan");
+
+        //Met à jour le temps pour le prochain tir
+        //Time.time = Temps écoulé depuis le lancement du jeu
+        //temps du prochain tir = temps total écoulé + temps qu'il faut attendre
+        nextFire = Time.time + weapon.fireRate;
+
+        //On va lancer un rayon invisible qui simulera les balles du gun
+
+        //Crée un vecteur au centre de la vue de la caméra
+        Vector3 rayOrigin = fpsCam.transform.position;
+
+        //RaycastHit : permet de savoir ce que le rayon a touché
+        RaycastHit hit;
+
+        // Vérifie si le raycast a touché quelque chose
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, weapon.wpnRange, mask))
+        {
+            Debug.Log(hit.collider.name);
+            if (hit.transform.tag == "ExplosiveBarrel")
+            {
+                Debug.Log("Barrel Touché !");
+                hit.transform.GetComponent<ExplosiveBarrel>().Explode();
+            }
+            else if (hit.transform.tag == "obama")
+            {
+
+                hit.transform.GetComponent<obama>().surprise(hit.transform.tag);
+
+            }
+            else
+            {
+                hit.collider.gameObject.SendMessage(enemieDamageFunction, dammage);
+            }
+        }
         Animator.SetInteger("Ammo", weapon.munitions);
     }
 }

@@ -166,7 +166,8 @@ public class EnnemieAi : MonoBehaviour
             int dropObject = Random.Range(0, objetToDrop.Count);
             Instantiate(objetToDrop[dropObject], transform.position, Quaternion.identity);
         }
-
+        PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + data.scoreToAddAtDeath);
+        Debug.Log(PlayerPrefs.GetInt("Score"));
         Destroy(gameObject);
     }
 

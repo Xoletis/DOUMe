@@ -52,13 +52,17 @@ public class SaveData : MonoBehaviour
     {
         //on recupere le chemain où enregistrer le fichier de sauvgarde (Application.persistentDataPath = chemin de l'application)
         string fillPath = Application.persistentDataPath + "/Data.json";
-        //On lit le fichier de sauvgarde
-        string inventoryData = System.IO.File.ReadAllText(fillPath);
+        //on verifi si le fichier de sauvgard existe
+        if (System.IO.File.Exists(fillPath))
+        {
+            //On lit le fichier de sauvgarde
+            string inventoryData = System.IO.File.ReadAllText(fillPath);
 
-        //On apllique la sauvgard aux stats
-        player.stat = JsonUtility.FromJson<Stat>(inventoryData);
-        //refreshe des données sur l'écran
-        player.refreshscreen();
-        Debug.Log("chargement effectué");
+            //On apllique la sauvgard aux stats
+            player.stat = JsonUtility.FromJson<Stat>(inventoryData);
+            //refreshe des données sur l'écran
+            player.refreshscreen();
+            Debug.Log("chargement effectué");
+        }
     }
 }

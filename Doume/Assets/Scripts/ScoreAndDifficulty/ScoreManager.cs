@@ -28,5 +28,7 @@ public class ScoreManager : MonoBehaviour
 
         scoreText.text = " Score : " + score.ToString();
         highscoreText.text = " Highscore : " + highscore.ToString();
+        PlayerPrefs.SetInt("Score", 0);
+        PlayerPrefs.SetInt("Level", 0);
     }
 }

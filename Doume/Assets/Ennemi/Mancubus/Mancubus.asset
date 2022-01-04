@@ -21,5 +21,6 @@ MonoBehaviour:
   natuarlSound: {fileID: 8300000, guid: 8f9dd8ba0c6bc9b4f80853db0787f9f9, type: 3}
   attackSound: {fileID: 8300000, guid: f1fa25aff415242498bf4e0031ca44fc, type: 3}
   isRangeEnnemie: 1
+  scoreToAddAtDeath: 20
   droopRate: 100
   bullet: {fileID: 6947535345448991744, guid: 43689f7fd901ace47ac9a9e088570657, type: 3}
