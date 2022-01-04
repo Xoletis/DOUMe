@@ -4,3 +4,5 @@
 <li>Annimation objet</li>
 <li>Annimation arme</li>
 <li>Sond arme (à corriger)</li>
+
+<li>https://youtu.be/a2d4SCDWzpk</li>
