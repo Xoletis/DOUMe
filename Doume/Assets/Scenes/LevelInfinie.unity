@@ -7496,7 +7496,7 @@ Transform:
   m_GameObject: {fileID: 1347254678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 81.51, y: -7.58, z: -0.46}
-  m_LocalScale: {x: 1.4675, y: 1, z: 2.4467063}
+  m_LocalScale: {x: 1.4675, y: 1, z: 1.9857469}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 36
@@ -11093,7 +11093,7 @@ PrefabInstance:
       objectReference: {fileID: 210715070}
     - target: {fileID: 1380864147705895575, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
       propertyPath: Invincible
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1380864147705895575, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
       propertyPath: gunAmmoText

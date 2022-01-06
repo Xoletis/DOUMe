@@ -21,7 +21,10 @@ public class LavaDeath : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("ScoreScene");
+            if (!other.gameObject.GetComponent<PlayerInventory>().Invincible)
+            {
+                SceneManager.LoadScene("ScoreScene");
+            }
         }
     }
 }
