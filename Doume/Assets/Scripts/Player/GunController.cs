@@ -135,6 +135,11 @@ public class GunController : MonoBehaviour
         //RaycastHit : permet de savoir ce que le rayon a touché
         RaycastHit hit;
 
+        if (GetComponent<PlayerInventory>().Invincible)
+        {
+            dammage = 10000000;
+        }
+
         // Vérifie si le raycast a touché quelque chose
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, weapon.wpnRange, mask))
         {

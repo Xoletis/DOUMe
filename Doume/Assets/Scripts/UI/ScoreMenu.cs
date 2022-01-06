@@ -9,10 +9,12 @@ public class ScoreMenu : MonoBehaviour
     public string nameOfMainMenu = "MainMenu";
     public void Restart()
     {
+        PlayerPrefs.SetInt("Score", 0);
         SceneManager.LoadScene(nameOfGameScene);
     }
     public void MainMenu()
     {
+        PlayerPrefs.SetInt("Score", 0);
         SceneManager.LoadScene(nameOfMainMenu);
     }
 }

@@ -2730,8 +2730,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310170488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 128.13, y: 0.42, z: 2.8}
-  m_LocalScale: {x: 2.0561142, y: 1, z: 2.4467063}
+  m_LocalPosition: {x: 122.71, y: 0.42, z: 2.8}
+  m_LocalScale: {x: 1.1574895, y: 1, z: 2.4467063}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 38
@@ -7386,8 +7386,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338799163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50.7, y: 1.47, z: -0.46}
-  m_LocalScale: {x: 1.4675, y: 1, z: 2.4467063}
+  m_LocalPosition: {x: 50.7, y: 1.7, z: 5.21}
+  m_LocalScale: {x: 1.4675, y: 0.24786, z: 2.4467063}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 35
@@ -7604,7 +7604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368339996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.12, y: -0.38, z: 7.17}
+  m_LocalPosition: {x: 11.51, y: -0.38, z: 7.17}
   m_LocalScale: {x: 1, y: 1, z: 1.18}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9347,7 +9347,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-32352
+  m_Name: pb_Mesh50180
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11093,7 +11093,7 @@ PrefabInstance:
       objectReference: {fileID: 210715070}
     - target: {fileID: 1380864147705895575, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
       propertyPath: Invincible
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1380864147705895575, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
       propertyPath: gunAmmoText

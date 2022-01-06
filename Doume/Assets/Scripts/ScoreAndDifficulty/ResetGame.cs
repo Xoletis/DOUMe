@@ -6,7 +6,6 @@ public class ResetGame : MonoBehaviour
 {
     void Start()
     {
-        PlayerPrefs.SetInt("Score", 0);
         PlayerPrefs.SetInt("Level", 0);
         PlayerPrefs.SetInt("MultiplyBoss", 1);
         PlayerPrefs.SetInt("MultiplyEnnemie", 1);
