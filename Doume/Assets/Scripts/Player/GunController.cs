@@ -62,11 +62,11 @@ public class GunController : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0 && canFire)
         {
             weapon.munitions--;
-            attack(weapon.wpnDmg);
+            attack(weapon.wpnDmg * GetComponent<PlayerInventory>().stat.multiply);
         }
         else if(Input.GetButton("Fire1") && Time.time > nextFire && weapon.nom == "Sword")
         {
-            attack(1.0f);
+            attack(1.0f * GetComponent<PlayerInventory>().stat.multiply);
         }
     }
 

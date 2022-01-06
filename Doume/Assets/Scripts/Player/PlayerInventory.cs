@@ -4,6 +4,23 @@ using UnityEngine.UI;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
+//Stat du joueur
+[System.Serializable]
+public struct Stat
+{
+    public int health;
+    public int armor;
+    public int maxHealth;
+    public int maxArmor;
+    public int ShotgunAmmo;
+    public int GunAmmo;
+    public int ShotgunAmmoMax;
+    public int GunAmmoMax;
+    public int EnergyAmmo;
+    public int EnergyAmmoMax;
+    public float multiply;
+}
+
 public class PlayerInventory : MonoBehaviour
 {
 
@@ -59,6 +76,10 @@ public class PlayerInventory : MonoBehaviour
 
         gunController = gameObject.GetComponent<GunController>();
         refreshscreen();
+
+        if (stat.multiply == 0){
+            stat.multiply = 1;
+        }
     }
 
     void Update()
@@ -308,20 +329,4 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-}
-
-//Stat du joueur
-[System.Serializable]
-public struct Stat
-{
-    public int health;
-    public int armor;
-    public int maxHealth;
-    public int maxArmor;
-    public int ShotgunAmmo;
-    public int GunAmmo;
-    public int ShotgunAmmoMax;
-    public int GunAmmoMax;
-    public int EnergyAmmo;
-    public int EnergyAmmoMax;
 }

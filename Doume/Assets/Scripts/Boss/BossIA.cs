@@ -81,7 +81,13 @@ public class BossIA : MonoBehaviour
             if (health <= 0)
             {
                 Destroy(lave);
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().AddMaxHealth(5);
+
+                int n = Random.Range(1, 2);
+                if (n == 1)
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().AddMaxHealth(5);
+                else
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().stat.multiply += 0.25f;
+                
                 PlayerPrefs.SetInt("MultiplyBoss", PlayerPrefs.GetInt("MultiplyBoss") + 1);
                 Destroy(gameObject);
             }
