@@ -16,8 +16,8 @@ MonoBehaviour:
   wpnDmg: 200
   fireRate: 0.5
   wpnRange: 2
-  munitions: 0
-  maxMunitions: 20
+  munitions: 25
+  maxMunitions: 25
   reaoldTime: 2
   Image: {fileID: 4269063500451753065, guid: 480683903847fa24a81a5cac810dc762, type: 3}
   ammoType: 2

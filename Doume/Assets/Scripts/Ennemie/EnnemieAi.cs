@@ -27,6 +27,7 @@ public class EnnemieAi : MonoBehaviour
     public float health;
     public GameObject blood;
     public AudioSource source;
+    private float damage;
 
     public bool isInvicible = false;
 
@@ -46,6 +47,9 @@ public class EnnemieAi : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed = data.speed;
         health = data.health;
+        health *= PlayerPrefs.GetInt("MultiplyEnnemie");
+        damage = data.damage;
+        damage *= PlayerPrefs.GetInt("MultiplyEnnemie");
         attackCouldown = 0;
         if(door != null)
             door.AddEnnemy();
@@ -164,7 +168,8 @@ public class EnnemieAi : MonoBehaviour
             }
 
             int dropObject = Random.Range(0, objetToDrop.Count);
-            Instantiate(objetToDrop[dropObject], transform.position, Quaternion.identity);
+            if(objetToDrop[dropObject] != null)
+                Instantiate(objetToDrop[dropObject], transform.position, Quaternion.identity);
         }
         PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + data.scoreToAddAtDeath);
         Debug.Log(PlayerPrefs.GetInt("Score"));
@@ -185,7 +190,7 @@ public class EnnemieAi : MonoBehaviour
         Vector3 vector = new Vector3(0, 0, 2f) + dir;
 
         GameObject bullet = Instantiate(data.bullet, spawnBullet.position, Quaternion.identity);
-        bullet.GetComponent<Bullet>().damage = data.damage;
+        bullet.GetComponent<Bullet>().damage = damage;
         bullet.GetComponent<Bullet>().playerDamageFonctionName = playerDamageFonctionName;
     }
 
@@ -193,7 +198,7 @@ public class EnnemieAi : MonoBehaviour
     {
         source.clip = data.attackSound;
         source.Play();
-        Player.SendMessage(playerDamageFonctionName, data.damage);
+        Player.SendMessage(playerDamageFonctionName, damage);
     }
 
     public void Explose(int damage)

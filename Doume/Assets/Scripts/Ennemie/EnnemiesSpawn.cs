@@ -9,7 +9,7 @@ public class EnnemiesSpawn : MonoBehaviour
     public int nbEnnemies;
     public int spawnerIndex = 0;
 
-    public ActivateAi activateAi;
+    public ActivateAi[] activateAi;
 
     private void Start()
     {
@@ -33,7 +33,10 @@ public class EnnemiesSpawn : MonoBehaviour
         ennemy.GetComponent<EnnemieAi>().door = this.GetComponent<DestroyRandomDoor>();
         spawnerIndex++;
         ennemy.GetComponent<EnnemieAi>().enabled = false;
-        activateAi.ennemies.Add(ennemy);
+        foreach(ActivateAi activate in activateAi)
+        {
+            activate.ennemies.Add(ennemy);
+        }
     }
 
     //on lance le spawne des ennemies

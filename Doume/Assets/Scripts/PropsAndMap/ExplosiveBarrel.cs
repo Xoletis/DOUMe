@@ -19,25 +19,6 @@ public class ExplosiveBarrel : MonoBehaviour
     void AreaDamageEnemies(Vector3 location, float radius, int damage)
     {
         Collider[] objectsInRange = Physics.OverlapSphere(location, radius);
-        foreach (Collider col in objectsInRange)
-        {
-            GameObject go = col.gameObject;
-                //linear falloff of effect
-                float proximity = (location - go.transform.position).magnitude;
-
-                if (go.CompareTag("Player"))
-                {
-                    go.SendMessage("HurtPlayer", damage);
-                }
-                else if (go.CompareTag("Ennemie"))
-                {
-                    go.SendMessage("TakeDamage", damage);
-                }
-                else if (go.CompareTag("ExplosiveBarrel"))
-                {
-                    go.GetComponent<ExplosiveBarrel>().Explode();
-                }
-        }
 
 
     }

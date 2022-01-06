@@ -23,6 +23,7 @@ public class SaveData : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+        Load();
     }
 
     private void Update()

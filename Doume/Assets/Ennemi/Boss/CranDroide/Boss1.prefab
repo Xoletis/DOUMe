@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1442780814344719828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4597344808899467202}
+  m_Layer: 0
+  m_Name: EnnemieSpawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4597344808899467202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442780814344719828}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5313951, y: 0.0062513947, z: -0.015}
+  m_LocalScale: {x: 0.090081975, y: 0.090081975, z: 0.090081975}
+  m_Children: []
+  m_Father: {fileID: 2597095173496667292}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2597095173496667281
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,9 +44,6 @@ GameObject:
   - component: {fileID: 2597095173496667282}
   - component: {fileID: 6452078177792681840}
   - component: {fileID: 5307725854663326323}
-  - component: {fileID: 8310385941808408101}
-  - component: {fileID: 4860023715103589194}
-  - component: {fileID: 6154400285986247698}
   m_Layer: 3
   m_Name: Boss1
   m_TagString: Ennemie
@@ -39,6 +66,10 @@ Transform:
   - {fileID: 1749041604866797859}
   - {fileID: 9090471934937627616}
   - {fileID: 2161602329082314696}
+  - {fileID: 1034829285699347014}
+  - {fileID: 4597344808899467202}
+  - {fileID: 1251337236658807243}
+  - {fileID: 4257948034360828341}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -81,7 +112,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7552218760340626732, guid: ee87c90630ead6442a9a00b68ca35c3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -131,15 +162,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee04536fa2d3a0349a3811ced7ee5a62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capacity:
-  - {fileID: 8310385941808408101}
-  - {fileID: 4860023715103589194}
-  - {fileID: 6154400285986247698}
   isInvicible: 0
-  health: 10000
+  maxHealth: 50
+  health: 10
   blood: {fileID: 5532776379459391, guid: 8665e308e8b72e841bae7f815f8905ee, type: 3}
-  maxCouldown: 5
+  maxCouldown: 25
   timeEnterTowAttaque: 5
+  nbCapcity: 3
+  lave: {fileID: 0}
+  FonctionToHurtPlayer: HurtPlayer
+  animator: {fileID: 5307725854663326323}
+  FireDamage: 1
+  FireBullet: {fileID: 6947535345448991744, guid: 11d2bb18b3982304591ae11a20f81b45, type: 3}
+  FireSpawnBullets:
+  - {fileID: 4680159625983714872}
+  BoolingDamage: 2
+  Boolingbullet: {fileID: 6947535345448991744, guid: ba5dc47e36bbf7448985ff1008bfa3df, type: 3}
+  BoolingSpawnBullets:
+  - {fileID: 2161602329082314696}
+  FlashDamage: 0
+  FlashBullet: {fileID: 6947535345448991744, guid: 7669844ec4d94f441b5c9a608bff374d, type: 3}
+  FlashSpawnBullets:
+  - {fileID: 1749041604866797859}
+  - {fileID: 9090471934937627616}
+  ennemie: {fileID: 6721097740804304374, guid: a4aa6a23c63fb384390a5ee8080a6062, type: 3}
+  EnnemieSpawns:
+  - {fileID: 1034829285699347014}
+  - {fileID: 4597344808899467202}
+  - {fileID: 1251337236658807243}
+  - {fileID: 4257948034360828341}
 --- !u!95 &5307725854663326323
 Animator:
   serializedVersion: 3
@@ -159,64 +210,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8310385941808408101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2597095173496667281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b592b226e46b9ad488d3adf17557290e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 0
-  Annime: Fireing
-  damage: 2
-  bullet: {fileID: 6947535345448991744, guid: 11d2bb18b3982304591ae11a20f81b45, type: 3}
-  spawnBullets:
-  - {fileID: 4680159625983714872}
-  FonctionToHurtPlayer: HurtPlayer
---- !u!114 &4860023715103589194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2597095173496667281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73248e695d19cec439739d222ef929b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 0
-  Annime: Flashing
-  damage: 0
-  bullet: {fileID: 6947535345448991744, guid: 7669844ec4d94f441b5c9a608bff374d, type: 3}
-  spawnBullets:
-  - {fileID: 1749041604866797859}
-  - {fileID: 9090471934937627616}
-  FonctionToHurtPlayer: HurtPlayer
---- !u!114 &6154400285986247698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2597095173496667281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 771a0e14d0ccf7e4998ee729f55fd087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 0
-  Annime: Booling
-  damage: 10
-  bullet: {fileID: 6947535345448991744, guid: ba5dc47e36bbf7448985ff1008bfa3df, type: 3}
-  spawnBullets:
-  - {fileID: 2161602329082314696}
-  FonctionToHurtPlayer: HurtPlayer
 --- !u!1 &3918619499171087468
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +270,36 @@ Transform:
   m_Father: {fileID: 2597095173496667292}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5201113455469923301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1034829285699347014}
+  m_Layer: 0
+  m_Name: EnnemieSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1034829285699347014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201113455469923301}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.009096718, y: 0.0062513947, z: 0.433}
+  m_LocalScale: {x: 0.090081975, y: 0.090081975, z: 0.090081975}
+  m_Children: []
+  m_Father: {fileID: 2597095173496667292}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5664073394699407723
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +330,36 @@ Transform:
   m_Father: {fileID: 2597095173496667292}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5781118499026330276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4257948034360828341}
+  m_Layer: 0
+  m_Name: EnnemieSpawn (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4257948034360828341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5781118499026330276}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.009096718, y: 0.0062513947, z: -0.76058614}
+  m_LocalScale: {x: 0.090081975, y: 0.090081975, z: 0.090081975}
+  m_Children: []
+  m_Father: {fileID: 2597095173496667292}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6944527337184708269
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,4 +389,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2597095173496667292}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7145727979748097926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251337236658807243}
+  m_Layer: 0
+  m_Name: EnnemieSpawn (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1251337236658807243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145727979748097926}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5045476, y: 0.0062513947, z: -0.015}
+  m_LocalScale: {x: 0.090081975, y: 0.090081975, z: 0.090081975}
+  m_Children: []
+  m_Father: {fileID: 2597095173496667292}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

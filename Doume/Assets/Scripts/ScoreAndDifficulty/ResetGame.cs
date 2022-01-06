@@ -8,5 +8,10 @@ public class ResetGame : MonoBehaviour
     {
         PlayerPrefs.SetInt("Score", 0);
         PlayerPrefs.SetInt("Level", 0);
+        PlayerPrefs.SetInt("MultiplyBoss", 1);
+        PlayerPrefs.SetInt("MultiplyEnnemie", 1);
+        string fillPath = Application.persistentDataPath + "/Data.json";
+        Debug.Log(fillPath);
+        System.IO.File.Delete(fillPath);
     }
 }

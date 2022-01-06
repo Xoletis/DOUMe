@@ -31,6 +31,7 @@ public class PlayerInventory : MonoBehaviour
 
     public Volume v;
     private Vignette vg;
+    public bool Invincible;
 
     private void Awake()
     {
@@ -79,15 +80,18 @@ public class PlayerInventory : MonoBehaviour
     // Le joueur perd des points de vie / d'armure
     public void HurtPlayer(int damage)
     {
-        if (stat.armor > damage)
-            stat.armor -= damage;
-        else if (stat.armor < damage)
+        if (!Invincible)
         {
-            stat.health -= (damage - stat.armor);
-            stat.armor = 0;
+            if (stat.armor > damage)
+                stat.armor -= damage;
+            else if (stat.armor < damage)
+            {
+                stat.health -= (damage - stat.armor);
+                stat.armor = 0;
+            }
+            LeftHealth();
+            refreshscreen();
         }
-        LeftHealth();
-        refreshscreen();
     }
 
     // Le joueur est-il mort ?
