@@ -50,6 +50,8 @@ public class PlayerInventory : MonoBehaviour
     private Vignette vg;
     public bool Invincible;
 
+    public GameObject flammes;
+
     private void Awake()
     {
         for (int i = 0; i < allWeapons.Length; i++)
@@ -329,4 +331,23 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    public void lava(bool feux)
+    {
+        if (feux)
+        {
+            flammes.SetActive(true);
+            StartCoroutine(dammaging());
+        }
+        else
+        {
+            flammes.SetActive(false);
+            StopCoroutine(dammaging());
+        }
+    }
+
+    IEnumerator dammaging()
+    {
+        HurtPlayer(1);
+        yield return new WaitForSeconds(0.5f);
+    }
 }
