@@ -161,7 +161,7 @@ MonoBehaviour:
   source: {fileID: 0}
   isInvicible: 0
   DropList:
-  - DropObject: {fileID: 8613227832618555860, guid: 633179686391b2d4c91a295926c6d981, type: 3}
+  - DropObject: {fileID: 6812413193052654591, guid: df418fbbe83201546adb57e96e8d0e8c, type: 3}
     chance: 10
   - DropObject: {fileID: 2418897022797413847, guid: 633179686391b2d4c91a295926c6d981, type: 3}
     chance: 15

@@ -13,6 +13,7 @@ public class ButtonsManager : MonoBehaviour
     public GameObject panelControls;
     public AudioMixer music;
     public Slider musicSlider;
+    public Slider soundSlider;
     public Toggle fullScreenToggle;
 
     public void Quitter()
@@ -36,6 +37,17 @@ public class ButtonsManager : MonoBehaviour
     public void setMusicVolum(float volume)
     {
         music.SetFloat("Music", volume);
+    }
+
+    public void immortel()
+    {
+        if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftAlt))
+            SceneManager.LoadScene("LevelInfinieImortal");
+    }
+
+    public void setSoundVolum(float volume)
+    {
+        music.SetFloat("Sound", volume);
     }
 
     public void ReturnMenuButton()
@@ -97,6 +109,11 @@ public class ButtonsManager : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
         Time.timeScale = 1;
+        float n;
+        music.GetFloat("Music", out n);
+        musicSlider.value = n;
+        music.GetFloat("Sound", out n);
+        soundSlider.value = n;
     }
 
 }

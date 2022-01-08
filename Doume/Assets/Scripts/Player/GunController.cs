@@ -41,32 +41,34 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward * weapon.wpnRange, Color.white);
-
-        ammoText.text = weapon.munitions + "";
-
-        if (Input.GetKeyDown(KeyCode.R))
+        if (!PauseMenuManager.instance.isPaused)
         {
-            ReloadAmmo();
-        }
+            Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward * weapon.wpnRange, Color.white);
 
-        if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions == 0)
-        {
-            Debug.Log("Pas de munitions");
+            ammoText.text = weapon.munitions + "";
 
-        }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                ReloadAmmo();
+            }
 
-        // Vérifie si le joueur a pressé le bouton pour faire feu (bouton gauche de la souris)
-        // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
-        if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0 && canFire)
-        {
-            weapon.munitions--;
-            attack(weapon.wpnDmg * GetComponent<PlayerInventory>().stat.multiply);
-        }
-        else if(Input.GetButton("Fire1") && Time.time > nextFire && weapon.nom == "Sword")
-        {
-            attack(1.0f * GetComponent<PlayerInventory>().stat.multiply);
+            if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions == 0)
+            {
+                Debug.Log("Pas de munitions");
+
+            }
+
+            // Vérifie si le joueur a pressé le bouton pour faire feu (bouton gauche de la souris)
+            // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
+            if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.munitions > 0 && canFire)
+            {
+                weapon.munitions--;
+                attack(weapon.wpnDmg * GetComponent<PlayerInventory>().stat.multiply);
+            }
+            else if (Input.GetButton("Fire1") && Time.time > nextFire && weapon.nom == "Sword")
+            {
+                attack(1.0f * GetComponent<PlayerInventory>().stat.multiply);
+            }
         }
     }
 

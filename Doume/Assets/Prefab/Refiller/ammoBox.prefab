@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2418897022797413804}
   - component: {fileID: 2418897022797413805}
   m_Layer: 0
-  m_Name: AmmoBox
+  m_Name: ammoBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typeToRefill: 0
-  nbToAdd: 10
+  nbToAdd: 5
 --- !u!114 &2418897022797413801
 MonoBehaviour:
   m_ObjectHideFlags: 0

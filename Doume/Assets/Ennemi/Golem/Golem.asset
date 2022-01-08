@@ -22,5 +22,5 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: 0f586500cb772744eafb8909391528ed, type: 3}
   isRangeEnnemie: 0
   scoreToAddAtDeath: 20
-  droopRate: 95
+  droopRate: 75
   bullet: {fileID: 0}

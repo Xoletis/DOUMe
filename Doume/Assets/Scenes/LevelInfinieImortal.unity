@@ -11853,7 +11853,7 @@ PrefabInstance:
       objectReference: {fileID: 210715070}
     - target: {fileID: 1380864147705895575, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
       propertyPath: Invincible
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1380864147705895575, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
       propertyPath: gunAmmoText

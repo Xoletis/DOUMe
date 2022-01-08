@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2418897022797413806, guid: 633179686391b2d4c91a295926c6d981, type: 3}
       propertyPath: nbToAdd
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2418897022797413806, guid: 633179686391b2d4c91a295926c6d981, type: 3}
       propertyPath: typeToRefill

@@ -22,5 +22,5 @@ MonoBehaviour:
   attackSound: {fileID: 0}
   isRangeEnnemie: 0
   scoreToAddAtDeath: 2
-  droopRate: 100
+  droopRate: 0
   bullet: {fileID: 0}

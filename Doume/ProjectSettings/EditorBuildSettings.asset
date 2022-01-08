@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScoreScene.unity
     guid: e94fe0d23c8fd7b42bfa5905e03109c0
+  - enabled: 1
+    path: Assets/Scenes/LevelInfinieImortal.unity
+    guid: dbe95768d3c9ef44a9574c16f4a1b60c
   m_configObjects: {}
