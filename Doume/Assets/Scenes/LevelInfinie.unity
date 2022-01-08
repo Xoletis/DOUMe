@@ -10021,10 +10021,10 @@ GameObject:
   - component: {fileID: 1819253256}
   - component: {fileID: 1819253255}
   - component: {fileID: 1819253254}
-  - component: {fileID: 1819253253}
   - component: {fileID: 1819253257}
   - component: {fileID: 1819253258}
   - component: {fileID: 1819253259}
+  - component: {fileID: 1819253253}
   m_Layer: 0
   m_Name: LaveQuiMonte
   m_TagString: Untagged
@@ -10032,8 +10032,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1819253253
-MeshCollider:
+--- !u!65 &1819253253
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10042,10 +10042,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 9.999999, y: 2.2204459e-16, z: 9.999999}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1819253254
 MeshRenderer:
   m_ObjectHideFlags: 0
