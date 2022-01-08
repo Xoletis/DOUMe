@@ -27,7 +27,7 @@ public class NextLevel : MonoBehaviour
                 PlayerPrefs.SetInt("MultiplyEnnemie", PlayerPrefs.GetInt("MultiplyEnnemie") + 1);
             }
             SaveData.instance.Save();
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
         }
     }
 }
