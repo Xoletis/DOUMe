@@ -158,14 +158,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecd35dd341ea5544aa31efb41cd6210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 5
   TimeBetweenDeath: 2
-  speed: 500
-  playerDamageFonctionName: 
+  speed: 1000
+  playerDamageFonctionName: HurtPlayer
   flashing: 0
   ralentisement: 0
   isBomb: 1
-  ExplosedParticule: {fileID: 6284049760296652210, guid: d1ac68ba9bb2f8040bf7fdbea98a4e55, type: 3}
+  ExplosedParticule: {fileID: 6284049760296652208, guid: d1ac68ba9bb2f8040bf7fdbea98a4e55, type: 3}
   ExplosedRange: 5
 --- !u!114 &4347396857822374491
 MonoBehaviour:

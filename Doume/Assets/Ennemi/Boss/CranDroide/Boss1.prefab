@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInvicible: 0
-  maxHealth: 50
-  health: 10
+  maxHealth: 200
+  health: 200
   blood: {fileID: 5532776379459391, guid: 8665e308e8b72e841bae7f815f8905ee, type: 3}
   maxCouldown: 25
   timeEnterTowAttaque: 5
@@ -172,11 +172,11 @@ MonoBehaviour:
   lave: {fileID: 0}
   FonctionToHurtPlayer: HurtPlayer
   animator: {fileID: 5307725854663326323}
-  FireDamage: 1
+  FireDamage: 2
   FireBullet: {fileID: 6947535345448991744, guid: 11d2bb18b3982304591ae11a20f81b45, type: 3}
   FireSpawnBullets:
   - {fileID: 4680159625983714872}
-  BoolingDamage: 2
+  BoolingDamage: 4
   Boolingbullet: {fileID: 6947535345448991744, guid: ba5dc47e36bbf7448985ff1008bfa3df, type: 3}
   BoolingSpawnBullets:
   - {fileID: 2161602329082314696}

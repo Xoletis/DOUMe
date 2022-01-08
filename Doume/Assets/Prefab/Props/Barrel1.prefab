@@ -144,3 +144,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explo: {fileID: 6284049760296652208, guid: d1ac68ba9bb2f8040bf7fdbea98a4e55, type: 3}
+  radius: 5
+  dammage: 10

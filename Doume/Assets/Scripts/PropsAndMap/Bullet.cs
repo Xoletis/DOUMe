@@ -7,12 +7,11 @@ public class Bullet : MonoBehaviour
     public float damage;
     public float TimeBetweenDeath = 2f;
     public float speed = 1000f;
-    [HideInInspector]
     public string playerDamageFonctionName;
     public bool flashing;
     public bool ralentisement;
     public bool isBomb;
-    public GameObject ExplosedParticule;
+    public ParticleSystem ExplosedParticule;
     public float ExplosedRange;
 
     void Start()
@@ -39,7 +38,7 @@ public class Bullet : MonoBehaviour
             }
             if (isBomb)
             {
-                Explosed(collision);
+                Explosed();
             }
             else
             {
@@ -49,12 +48,14 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    public void Explosed(Collision collision)
+    public void Explosed()
     {
-        Instantiate(ExplosedParticule, transform.position, Quaternion.identity);
+        Debug.Log("Boom");
+        ParticleSystem explosion = Instantiate(ExplosedParticule, transform.position, Quaternion.identity);
+        explosion.GetComponent<ParticleSystem>().Play();
         if (PlayerDetected())
         {
-            collision.gameObject.SendMessage(playerDamageFonctionName, damage);
+            GameObject.FindGameObjectWithTag("Player").SendMessage(playerDamageFonctionName, damage);
         }
         Destroy(gameObject);
     }
@@ -62,7 +63,14 @@ public class Bullet : MonoBehaviour
     IEnumerator timeBeforeDistroy()
     {
         yield return new WaitForSeconds(TimeBetweenDeath);
-        Destroy(gameObject);
+        if (isBomb)
+        {
+            Explosed();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     bool PlayerDetected()
@@ -77,5 +85,10 @@ public class Bullet : MonoBehaviour
             }
         }
         return false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, ExplosedRange);
     }
 }
