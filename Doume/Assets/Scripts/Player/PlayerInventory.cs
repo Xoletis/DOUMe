@@ -345,9 +345,19 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    public void LavaDamage(int damage)
+    {
+        if (!Invincible)
+        {
+           
+            stat.health -= (damage);
+            LeftHealth();
+            refreshscreen();
+        }
+    }
     IEnumerator dammaging()
     {
-        HurtPlayer(1);
+        LavaDamage(1);
         yield return new WaitForSeconds(0.5f);
     }
 }
