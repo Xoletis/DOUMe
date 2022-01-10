@@ -15,11 +15,11 @@ C:/Users/Admin/Documents/GitHub/Doume/Doume
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60707
+58569
 Successfully changed project path to: C:/Users/Admin/Documents/GitHub/Doume/Doume
 C:/Users/Admin/Documents/GitHub/Doume/Doume
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 161.86 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 81.43 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.12f1 (b3b2c6512326)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
@@ -35,37 +35,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56432
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56788
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005673 seconds.
+Registered in 0.002811 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 140.24 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 77.10 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.701 seconds
+- Completed reload, in  1.467 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.016597 seconds.
+Registered in 0.008598 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 146.05 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 83.75 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.954 seconds
+- Completed reload, in  1.587 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 1.12 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3229 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 146.2 MB.
 System memory in use after: 146.4 MB.
 
 Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3666.
-Total: 6.566900 ms (FindLiveObjects: 0.976400 ms CreateObjectMapping: 0.548500 ms MarkObjects: 4.764900 ms  DeleteObjects: 0.274300 ms)
+Total: 3.595900 ms (FindLiveObjects: 0.374500 ms CreateObjectMapping: 0.225700 ms MarkObjects: 2.875900 ms  DeleteObjects: 0.118600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -79,30 +79,30 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Audio/Mixer.mixer
-  artifactKey: Guid(8169a109e22797543a215aefcd05648a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/Mixer.mixer using Guid(8169a109e22797543a215aefcd05648a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd16a9152689cbac6c2b08ef6dc33100') in 0.238371 seconds 
-  Import took 0.250621 seconds .
+  path: Assets/Scenes/LevelInfinie.unity
+  artifactKey: Guid(605e49ac944069c459c10ba86fc232b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/LevelInfinie.unity using Guid(605e49ac944069c459c10ba86fc232b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbfa27b624d41e26744625ae0e1e81f9') in 0.018948 seconds 
+  Import took 0.024794 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.016032 seconds.
+Registered in 0.008553 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.96 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.271 seconds
+- Completed reload, in  1.691 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3093 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 136.6 MB.
 System memory in use after: 136.8 MB.
 
 Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3668.
-Total: 6.125400 ms (FindLiveObjects: 0.500500 ms CreateObjectMapping: 0.304500 ms MarkObjects: 5.273900 ms  DeleteObjects: 0.044700 ms)
+Total: 5.276800 ms (FindLiveObjects: 0.683900 ms CreateObjectMapping: 0.411300 ms MarkObjects: 4.112600 ms  DeleteObjects: 0.067700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -116,14 +116,341 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 11.77 ms, found 2 plugins.
+Registering precompiled user dll's ...
+Registered in 0.011782 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 75.9 MB.
-System memory in use after: 76.1 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.558 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.79 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3093 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 136.6 MB.
+System memory in use after: 136.9 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3668.
-Total: 6.023000 ms (FindLiveObjects: 0.939400 ms CreateObjectMapping: 0.497300 ms MarkObjects: 4.551100 ms  DeleteObjects: 0.031900 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3670.
+Total: 5.641900 ms (FindLiveObjects: 0.395400 ms CreateObjectMapping: 0.607400 ms MarkObjects: 4.603200 ms  DeleteObjects: 0.034500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1387.963211 seconds.
+  path: Assets/Music
+  artifactKey: Guid(ee43dabe1177e794f9d2e11e5b001d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music using Guid(ee43dabe1177e794f9d2e11e5b001d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61dece3db4fdcf2c8148d31cd36c0aae') in 0.022449 seconds 
+  Import took 0.040204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028211 seconds.
+  path: Assets/Music/01 Intro.flac
+  artifactKey: Guid(50b7daea5366e4b499ebd5c8dcb8a629) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/01 Intro.flac using Guid(50b7daea5366e4b499ebd5c8dcb8a629) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '899342bcec770a8d0e9883fe469e7467') in 0.235449 seconds 
+  Import took 0.249270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000405 seconds.
+  path: Assets/Music/24 E3M5 (Demons On The Prey).flac
+  artifactKey: Guid(0f2c040333b9aba4eb5e559cc2011749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/24 E3M5 (Demons On The Prey).flac using Guid(0f2c040333b9aba4eb5e559cc2011749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '771d07d3c7a1e75b79bb88d28be40a33') in 0.026026 seconds 
+  Import took 0.036353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000851 seconds.
+  path: Assets/Music/11 E2M1 (I Sawed The Demons).flac
+  artifactKey: Guid(f2624a2ab186a9c42a78b15ab21816d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/11 E2M1 (I Sawed The Demons).flac using Guid(f2624a2ab186a9c42a78b15ab21816d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69886edbad41f26608a54a3f5d246059') in 0.020161 seconds 
+  Import took 0.034576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000427 seconds.
+  path: Assets/Music/At Doom's Gate.flac
+  artifactKey: Guid(a8da56ba9b434804e811a283b44450b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/At Doom's Gate.flac using Guid(a8da56ba9b434804e811a283b44450b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b6eb4b873c6dfce2c37cb6bbfd8a0fd') in 0.020111 seconds 
+  Import took 0.034549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000620 seconds.
+  path: Assets/Music/15 E2M5 (Demons On The Prey).flac
+  artifactKey: Guid(dc4b07dea1613c848af2b1e7909b653e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/15 E2M5 (Demons On The Prey).flac using Guid(dc4b07dea1613c848af2b1e7909b653e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0448af9dcea84ef27b0b4de5ec1886da') in 0.032345 seconds 
+  Import took 0.043191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000407 seconds.
+  path: Assets/Music/16 E2M6 (Sinister).flac
+  artifactKey: Guid(38ca3b5fb52f4664bb513b110c9df006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/16 E2M6 (Sinister).flac using Guid(38ca3b5fb52f4664bb513b110c9df006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ef667edfda6fa8283aee545757555d9') in 0.028595 seconds 
+  Import took 0.046958 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000486 seconds.
+  path: Assets/Music/22 E3M3 (Deep Into The Code).flac
+  artifactKey: Guid(4b78e4778c0ece94e97789e1dcec8e52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/22 E3M3 (Deep Into The Code).flac using Guid(4b78e4778c0ece94e97789e1dcec8e52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f7c1a237214bbd4da8707140e856ffe') in 0.025346 seconds 
+  Import took 0.044889 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000409 seconds.
+  path: Assets/Music/06 E1M5 (Suspense).flac
+  artifactKey: Guid(e1043fb2a6a3345408f89aac9167cf52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/06 E1M5 (Suspense).flac using Guid(e1043fb2a6a3345408f89aac9167cf52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '504fa703587df51765b1701d58273f29') in 0.022134 seconds 
+  Import took 0.034291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000426 seconds.
+  path: Assets/Music/10 E1M9 (Hiding The Secrets).flac
+  artifactKey: Guid(89a8e4e353c121e40ab6308cb1b1a3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/10 E1M9 (Hiding The Secrets).flac using Guid(89a8e4e353c121e40ab6308cb1b1a3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '048969b73324218cc79c62676a8b2b6e') in 0.040325 seconds 
+  Import took 0.049556 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000585 seconds.
+  path: Assets/Music/27 E3M8 (Facing The Spider).flac
+  artifactKey: Guid(af123faad58114b4386677b6c0e23407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/27 E3M8 (Facing The Spider).flac using Guid(af123faad58114b4386677b6c0e23407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bad7ea8872e689a1d828a94c933eea91') in 0.024359 seconds 
+  Import took 0.036433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000569 seconds.
+  path: Assets/Music/09 E1M8 (Sign Of Evil).flac
+  artifactKey: Guid(4ac27b4542e47124ea08e3c6e68ba7b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/09 E1M8 (Sign Of Evil).flac using Guid(4ac27b4542e47124ea08e3c6e68ba7b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49129bc6fb558e8994d37a57ad8fa8d7') in 0.024508 seconds 
+  Import took 0.041895 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000444 seconds.
+  path: Assets/Music/17 E2M7 (Waltz of the Demons).flac
+  artifactKey: Guid(2dc5b0357399bc34a836868514a8bf95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/17 E2M7 (Waltz of the Demons).flac using Guid(2dc5b0357399bc34a836868514a8bf95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8c59ce158387c49f53abe7d342075f4') in 0.020742 seconds 
+  Import took 0.043863 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000365 seconds.
+  path: Assets/Music/21 E3M2 (Donna To The Rescue).flac
+  artifactKey: Guid(1bd6e6ad72edcab418dbd1c0149a5e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/21 E3M2 (Donna To The Rescue).flac using Guid(1bd6e6ad72edcab418dbd1c0149a5e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cae2d80609bd4e974d5d40030d27477') in 0.044953 seconds 
+  Import took 0.055811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000393 seconds.
+  path: Assets/Music/28 E3M9 (Hiding The Secrets).flac
+  artifactKey: Guid(07eb1fd216ed7f04c974f886f03653f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/28 E3M9 (Hiding The Secrets).flac using Guid(07eb1fd216ed7f04c974f886f03653f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '328273bdc088f6da27979c179f096362') in 0.040643 seconds 
+  Import took 0.050679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/Music/29 Intermission (Intermission From DOOM).flac
+  artifactKey: Guid(a1f179af8c3480b498271c6ec5965ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/29 Intermission (Intermission From DOOM).flac using Guid(a1f179af8c3480b498271c6ec5965ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaf0532cc29ea93ceb7d96e30689c07b') in 0.020230 seconds 
+  Import took 0.038572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000508 seconds.
+  path: Assets/Music/04 E1M3 (Dark Halls).flac
+  artifactKey: Guid(c56731583b403ae4ab9009373cba29f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/04 E1M3 (Dark Halls).flac using Guid(c56731583b403ae4ab9009373cba29f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5116ef6649b9a454c218d95390eda89') in 0.023955 seconds 
+  Import took 0.038110 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001664 seconds.
+  path: Assets/Music/23 E3M4 (Sign Of Evil).flac
+  artifactKey: Guid(b7d95e2769f22994d8c5bbda126108fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/23 E3M4 (Sign Of Evil).flac using Guid(b7d95e2769f22994d8c5bbda126108fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd936ef14e497ce1a70130a8ae4d7376') in 0.034204 seconds 
+  Import took 0.048211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001151 seconds.
+  path: Assets/Music/13 E2M3 (Intermission From DOOM).flac
+  artifactKey: Guid(9cc94593d57125a4c98d61f2de7f560f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/13 E2M3 (Intermission From DOOM).flac using Guid(9cc94593d57125a4c98d61f2de7f560f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a0e0ed828a2fd53b1bf46841094f4d0') in 0.020854 seconds 
+  Import took 0.038455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000449 seconds.
+  path: Assets/Music/18 E2M8 (Nobody Told Me About id).flac
+  artifactKey: Guid(933e0ba8bfd1e8f4eaf19b474145d293) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/18 E2M8 (Nobody Told Me About id).flac using Guid(933e0ba8bfd1e8f4eaf19b474145d293) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c50b0d112ab06fed10599266f092f4e1') in 0.022592 seconds 
+  Import took 0.047531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000394 seconds.
+  path: Assets/Music/08 E1M7 (Demons On The Prey).flac
+  artifactKey: Guid(69955480dc83b0547a5947ab41f4fb39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/08 E1M7 (Demons On The Prey).flac using Guid(69955480dc83b0547a5947ab41f4fb39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a1343eada94bb104b2e8a475a41cfae') in 0.036935 seconds 
+  Import took 0.049129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000529 seconds.
+  path: Assets/Music/31 Endgame Music (Sweet Little Dead Bunny).flac
+  artifactKey: Guid(efab77cafe736db4abfbc120471871e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/31 Endgame Music (Sweet Little Dead Bunny).flac using Guid(efab77cafe736db4abfbc120471871e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65bcf4293403bc04b9c45f3861f5db38') in 0.023438 seconds 
+  Import took 0.036873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000866 seconds.
+  path: Assets/Music/07 E1M6 (On The Hunt).flac
+  artifactKey: Guid(847f055c6246bfc49b089c56b587fdbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/07 E1M6 (On The Hunt).flac using Guid(847f055c6246bfc49b089c56b587fdbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '505402646206cde9d2a0c8a27a6f7877') in 0.029747 seconds 
+  Import took 0.044535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000408 seconds.
+  path: Assets/Music/25 E3M6 (On The Hunt).flac
+  artifactKey: Guid(28036e20d8ccf6244b3e06e3f4e968c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/25 E3M6 (On The Hunt).flac using Guid(28036e20d8ccf6244b3e06e3f4e968c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98a65170a781b19ebd4c87fab4ae24d4') in 0.020211 seconds 
+  Import took 0.036077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000427 seconds.
+  path: Assets/Music/03 E1M2 (The Imp's Song).flac
+  artifactKey: Guid(aff09e08a8b5a6e46a02b2ba6c921b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/03 E1M2 (The Imp's Song).flac using Guid(aff09e08a8b5a6e46a02b2ba6c921b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c34e0f05be077a4943bef06ea464588') in 0.041075 seconds 
+  Import took 0.055571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/Music/26 E3M7 (Waltz of the Demons).flac
+  artifactKey: Guid(4174425faf2b3464bb7f9733701acbf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/26 E3M7 (Waltz of the Demons).flac using Guid(4174425faf2b3464bb7f9733701acbf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b85f83dab59358ba9a4f4e51e01032a') in 0.039263 seconds 
+  Import took 0.050447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000649 seconds.
+  path: Assets/Music/30 Victory Music (The End Of DOOM).flac
+  artifactKey: Guid(31c5a23c0c1c9a746b0831d32344ee32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/30 Victory Music (The End Of DOOM).flac using Guid(31c5a23c0c1c9a746b0831d32344ee32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c30fa8d178c10934373c53bbec0dd4a5') in 0.025133 seconds 
+  Import took 0.044370 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Music/05 E1M4 (Kitchen Ace [And Taking Names]).flac
+  artifactKey: Guid(993ef8ef62e73904ebeaa327e481b8f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/05 E1M4 (Kitchen Ace [And Taking Names]).flac using Guid(993ef8ef62e73904ebeaa327e481b8f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bbf87a206b463c95cb722269ec971ea') in 0.022761 seconds 
+  Import took 0.041082 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000933 seconds.
+  path: Assets/Music/12 E2M2 (The Demons From Adrian's Pen).flac
+  artifactKey: Guid(881fad192bab5f746afbfb2c1bffbae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/12 E2M2 (The Demons From Adrian's Pen).flac using Guid(881fad192bab5f746afbfb2c1bffbae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '876402bd24139eb6ed002c7396d6d29a') in 0.025717 seconds 
+  Import took 0.037324 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001044 seconds.
+  path: Assets/Music/20 E3M1 (Untitled).flac
+  artifactKey: Guid(23c9294741dc8d34da4877b681084e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/20 E3M1 (Untitled).flac using Guid(23c9294741dc8d34da4877b681084e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '997a2f4f61a998ccbda548fa47b80eb9') in 0.022678 seconds 
+  Import took 0.050150 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/Music/19 E2M9 (Untitled).flac
+  artifactKey: Guid(15b9dc719cd8cab48a083e17ae9e1129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/19 E2M9 (Untitled).flac using Guid(15b9dc719cd8cab48a083e17ae9e1129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22e9525920fb87416af5c79fe3d0f0ce') in 0.022596 seconds 
+  Import took 0.040532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001026 seconds.
+  path: Assets/Music/14 E2M4 (They're Going To Get You).flac
+  artifactKey: Guid(c84638bca568aa74d8b73c37cc176fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/14 E2M4 (They're Going To Get You).flac using Guid(c84638bca568aa74d8b73c37cc176fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93bda9e4213e7cc40329986ae5bbd560') in 0.031705 seconds 
+  Import took 0.043991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 276.301220 seconds.
+  path: Assets/Image/PC Computer - Doom Doom II - Items & Objects Transparent.png
+  artifactKey: Guid(e63981c81e5dbaf4b95a70216e061b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/PC Computer - Doom Doom II - Items & Objects Transparent.png using Guid(e63981c81e5dbaf4b95a70216e061b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb1e8723e069cef2bc8c4a934c5e70d') in 0.115038 seconds 
+  Import took 0.124912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.573522 seconds.
+  path: Assets/Prefab/Refiller/SimpleArmor 1.prefab
+  artifactKey: Guid(f48036e0d7d8c2045aa0de6dbccb9781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Refiller/SimpleArmor 1.prefab using Guid(f48036e0d7d8c2045aa0de6dbccb9781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1276ac456c38da114cd00dbe47a6ef4d') in 0.245241 seconds 
+  Import took 0.257456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.397699 seconds.
+  path: Assets/Prefab/Refiller/Damage+.prefab
+  artifactKey: Guid(f48036e0d7d8c2045aa0de6dbccb9781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Refiller/Damage+.prefab using Guid(f48036e0d7d8c2045aa0de6dbccb9781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '686f2059b21980d255cf4b3d42065880') in 0.028240 seconds 
+  Import took 0.042359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.045933 seconds.
+  path: Assets/Prefab/Refiller/Damage+.prefab
+  artifactKey: Guid(f48036e0d7d8c2045aa0de6dbccb9781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Refiller/Damage+.prefab using Guid(f48036e0d7d8c2045aa0de6dbccb9781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e871e5fe3ae9302de3d63627b664909f') in 0.025463 seconds 
+  Import took 0.038730 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.023785 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.493 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3093 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 142.0 MB.
+System memory in use after: 142.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3751.
+Total: 4.128500 ms (FindLiveObjects: 0.298600 ms CreateObjectMapping: 0.144600 ms MarkObjects: 3.636800 ms  DeleteObjects: 0.047100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -137,14 +464,23 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 8.16 ms, found 2 plugins.
+Registering precompiled user dll's ...
+Registered in 0.007262 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 75.9 MB.
-System memory in use after: 76.1 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.577 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.79 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3093 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 142.0 MB.
+System memory in use after: 142.2 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3668.
-Total: 4.271200 ms (FindLiveObjects: 0.389900 ms CreateObjectMapping: 0.222900 ms MarkObjects: 3.624600 ms  DeleteObjects: 0.032000 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3753.
+Total: 3.692400 ms (FindLiveObjects: 0.384300 ms CreateObjectMapping: 0.208500 ms MarkObjects: 3.064900 ms  DeleteObjects: 0.033300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -156,4 +492,64 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Import Request.
+  Time since last request: 209.269911 seconds.
+  path: Assets/Ennemi/Training Dump/Training Dump.prefab
+  artifactKey: Guid(ced695f0be6eaf647a24cf8108a727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ennemi/Training Dump/Training Dump.prefab using Guid(ced695f0be6eaf647a24cf8108a727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94b1083687ae7e36718d1d9581cc434e') in 0.246934 seconds 
+  Import took 0.260830 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.769016 seconds.
+  path: Assets/Ennemi/Training Dump/Training Dump.prefab
+  artifactKey: Guid(ced695f0be6eaf647a24cf8108a727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ennemi/Training Dump/Training Dump.prefab using Guid(ced695f0be6eaf647a24cf8108a727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fd904620da878a51f8e7ad531325b86') in 0.035220 seconds 
+  Import took 0.046736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006057 seconds.
+  path: Assets/Ennemi/Training Dump/Training Dump.prefab
+  artifactKey: Guid(ced695f0be6eaf647a24cf8108a727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ennemi/Training Dump/Training Dump.prefab using Guid(ced695f0be6eaf647a24cf8108a727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fd904620da878a51f8e7ad531325b86') in 0.026967 seconds 
+  Import took 0.036942 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.817947 seconds.
+  path: Assets/Ennemi/Training Dump/Training Dump.prefab
+  artifactKey: Guid(ced695f0be6eaf647a24cf8108a727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ennemi/Training Dump/Training Dump.prefab using Guid(ced695f0be6eaf647a24cf8108a727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '758857a831fe770a926ee53fc40f28b2') in 0.033304 seconds 
+  Import took 0.043964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.159898 seconds.
+  path: Assets/Ennemi/Batdemon/BatDemon.prefab
+  artifactKey: Guid(1c1653947c756474f8029c99bafd80ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ennemi/Batdemon/BatDemon.prefab using Guid(1c1653947c756474f8029c99bafd80ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a766735b442530b0da3eb17774bb719') in 0.072696 seconds 
+  Import took 0.082400 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.93 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 83.8 MB.
+System memory in use after: 84.0 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3810.
+Total: 4.797400 ms (FindLiveObjects: 0.380400 ms CreateObjectMapping: 0.197300 ms MarkObjects: 4.188000 ms  DeleteObjects: 0.030300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

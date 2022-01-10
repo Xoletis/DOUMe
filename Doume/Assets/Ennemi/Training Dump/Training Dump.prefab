@@ -191,7 +191,9 @@ MonoBehaviour:
   - DropObject: {fileID: 2279620641322621778, guid: 2e3c158a59a83bc45989b869366bfff5, type: 3}
     chance: 6
   - DropObject: {fileID: 3373650009510745480, guid: 555d00b307930c64d9a04469c7f29c21, type: 3}
-    chance: 3
+    chance: 2
+  - DropObject: {fileID: 2279620641322621778, guid: f48036e0d7d8c2045aa0de6dbccb9781, type: 3}
+    chance: 2
   door: {fileID: 0}
   spawnBullet: {fileID: 0}
   animator: {fileID: 0}

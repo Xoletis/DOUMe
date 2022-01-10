@@ -310,6 +310,11 @@ public class PlayerInventory : MonoBehaviour
         flash.SetActive(false);
     }
 
+    public void dammageplus(float value)
+    {
+        stat.multiply += value;
+    }
+
     IEnumerator Raletisement()
     {
         GetComponent<PlayerFPS>().walkingSpeed /= 2; 
