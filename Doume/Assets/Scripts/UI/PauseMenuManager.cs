@@ -41,6 +41,7 @@ public class PauseMenuManager : MonoBehaviour
     public void ReloadLevel()
     {
         Scene actualScene = SceneManager.GetActiveScene();
+        SaveData.instance.Save();
         SceneManager.LoadScene(actualScene.name);
     }
 
