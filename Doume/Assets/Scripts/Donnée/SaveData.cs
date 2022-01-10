@@ -26,18 +26,6 @@ public class SaveData : MonoBehaviour
         Load();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Save();
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Load();
-        }
-    }
-
     public void Save()
     {
         //on recupere les stats et on les met au format JSON

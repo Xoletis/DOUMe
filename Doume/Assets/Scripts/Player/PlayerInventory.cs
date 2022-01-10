@@ -306,7 +306,7 @@ public class PlayerInventory : MonoBehaviour
     IEnumerator Flash()
     {
         flash.SetActive(true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.7f);
         flash.SetActive(false);
     }
 

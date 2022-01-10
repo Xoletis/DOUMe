@@ -41,25 +41,11 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == nameOfGameScene)
         {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                inventory.HurtPlayer(20);
-            }
 
             if (inventory.IsDead())
             {
                 Debug.Log("mort du joueur");
                 SceneManager.LoadScene(nameOfScoreScene);
-            }
-
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                SceneManager.LoadScene(nameOfScoreScene);
-            }
-
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                AddScore(20);
             }
         }
     }

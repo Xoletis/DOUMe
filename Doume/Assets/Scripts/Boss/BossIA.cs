@@ -15,6 +15,9 @@ public class BossIA : MonoBehaviour
     public int nbCapcity = 0;
     public GameObject lave;
 
+    [HideInInspector]
+    public GameObject Porte;
+
     public string FonctionToHurtPlayer;
 
     [SerializeField]
@@ -42,6 +45,7 @@ public class BossIA : MonoBehaviour
     public void Start()
     {
         health = maxHealth;
+        maxHealth *= PlayerPrefs.GetInt("MultiplyBoss");
         health *= PlayerPrefs.GetInt("MultiplyBoss");
         BoolingDamage *= PlayerPrefs.GetInt("MultiplyBoss");
         FireDamage *= PlayerPrefs.GetInt("MultiplyBoss");
@@ -60,6 +64,9 @@ public class BossIA : MonoBehaviour
             case 1: animator.SetTrigger("Flashing"); break;
             case 2: animator.SetTrigger("Booling"); break;
             case 3: EnnemieSpawn(); break;
+            case 4: animator.SetTrigger("Fireing"); break;
+            case 5: animator.SetTrigger("Fireing"); break;
+            case 6: animator.SetTrigger("Fireing"); break;
         }
     }
 
@@ -82,13 +89,14 @@ public class BossIA : MonoBehaviour
             {
                 Destroy(lave);
 
-                int n = Random.Range(1, 2);
+                int n = Random.Range(1, 3);
                 if (n == 1)
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().AddMaxHealth(5);
                 else
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().stat.multiply += 0.25f;
                 
                 PlayerPrefs.SetInt("MultiplyBoss", PlayerPrefs.GetInt("MultiplyBoss") + 1);
+                Destroy(Porte);
                 Destroy(gameObject);
             }
         }
@@ -145,7 +153,7 @@ public class BossIA : MonoBehaviour
 
     public void EnnemieSpawn()
     {
-        int n = Random.Range(0, 5);
+        int n = Random.Range(0, 2);
         if (n == 0)
         {
             foreach (Transform ennemieSpawn in EnnemieSpawns)
@@ -153,6 +161,8 @@ public class BossIA : MonoBehaviour
                 Instantiate(ennemie, ennemieSpawn.position, Quaternion.identity);
             }
         }
+
+        StartCouldown();
     }
 
     public IEnumerator Couldown()

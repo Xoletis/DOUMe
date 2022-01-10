@@ -75,9 +75,4 @@ public class ExplosiveBarrel : MonoBehaviour
         }
         return _ennemies;
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }
 }

@@ -11,9 +11,14 @@ public class ButtonsManager : MonoBehaviour
     public GameObject panelOptionsMenu;
     public Dropdown resolutionDropdown;
     public GameObject panelControls;
+    public GameObject audioWindow;
+    public GameObject resolutionWindow;
+    public GameObject commandeWindow;
     public AudioMixer music;
     public Slider musicSlider;
     public Slider soundSlider;
+    public Slider SensitivityX;
+    public Slider SensitivityY;
     public Toggle fullScreenToggle;
 
     public void Quitter()
@@ -26,6 +31,26 @@ public class ButtonsManager : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
+    public void audioWindowActive()
+    {
+        audioWindow.SetActive(true);
+        resolutionWindow.SetActive(false);
+        commandeWindow.SetActive(false);
+    }
+
+    public void resolutionWindowActive()
+    {
+        audioWindow.SetActive(false);
+        resolutionWindow.SetActive(true);
+        commandeWindow.SetActive(false);
+    }
+
+    public void commandWindowActive()
+    {
+        audioWindow.SetActive(false);
+        resolutionWindow.SetActive(false);
+        commandeWindow.SetActive(true);
+    }
 
     public void OptionsPanel()
     {
@@ -43,6 +68,16 @@ public class ButtonsManager : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftAlt))
             SceneManager.LoadScene("LevelInfinieImortal");
+    }
+
+    public void setSensivityX(float sensitivity)
+    {
+        PlayerPrefs.SetFloat("SensivityX", sensitivity);
+    }
+
+    public void setSensivityY(float sensitivity)
+    {
+        PlayerPrefs.SetFloat("SensivityY", sensitivity);
     }
 
     public void setSoundVolum(float volume)
@@ -114,6 +149,16 @@ public class ButtonsManager : MonoBehaviour
         musicSlider.value = n;
         music.GetFloat("Sound", out n);
         soundSlider.value = n;
+        if(PlayerPrefs.GetFloat("SensivityX") == 0)
+        {
+            PlayerPrefs.SetFloat("SensivityX", 5);
+        }
+        if (PlayerPrefs.GetFloat("SensivityY") == 0)
+        {
+            PlayerPrefs.SetFloat("SensivityY", 5);
+        }
+        SensitivityX.value = PlayerPrefs.GetFloat("SensivityX");
+        SensitivityY.value = PlayerPrefs.GetFloat("SensivityY");
     }
 
 }

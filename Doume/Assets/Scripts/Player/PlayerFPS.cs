@@ -24,7 +24,8 @@ public class PlayerFPS : MonoBehaviour
 
     //Rotation de la caméra
     float rotationX = 0;
-    public float rotationSpeed = 2.0f;
+    public float rotationSpeedX = 2.0f;
+    public float rotationSpeedY = 2.0f;
     public float rotationXLimit = 45.0f;
 
 
@@ -38,6 +39,9 @@ public class PlayerFPS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        rotationSpeedX = PlayerPrefs.GetFloat("SensivityX");
+        rotationSpeedY = PlayerPrefs.GetFloat("SensivityY");
+
         if (!PauseMenuManager.instance.isPaused)
         {
             if (characterController.isGrounded)
@@ -112,7 +116,7 @@ public class PlayerFPS : MonoBehaviour
 
             //Input.GetAxis("Mouse Y") = mouvement de la souris haut/bas
             //On est en 3D donc applique ("Mouse Y") sur l'axe de rotation X 
-            rotationX += -Input.GetAxis("Mouse Y") * rotationSpeed;
+            rotationX += -Input.GetAxis("Mouse Y") * rotationSpeedY;
 
             //La rotation haut/bas de la caméra est comprise entre -45 et 45 
             //Mathf.Clamp permet de limiter une valeur
@@ -126,7 +130,7 @@ public class PlayerFPS : MonoBehaviour
 
             //Input.GetAxis("Mouse X") = mouvement de la souris gauche/droite
             //Applique la rotation gauche/droite sur le Player
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * rotationSpeed, 0);
+            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * rotationSpeedX, 0);
         }
     }
 }
