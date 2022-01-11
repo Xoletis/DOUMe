@@ -20,6 +20,8 @@ public class ButtonsManager : MonoBehaviour
     public Slider SensitivityX;
     public Slider SensitivityY;
     public Toggle fullScreenToggle;
+    public bool isMenu = false;
+    public Button resolutin, audio, commande;
 
     public void Quitter()
     {
@@ -31,9 +33,19 @@ public class ButtonsManager : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.LeftAlt) && Input.GetKey(KeyCode.LeftControl) && isMenu)
+        {
+            SceneManager.LoadScene("Demo");
+        }
+    }
     public void audioWindowActive()
     {
         audioWindow.SetActive(true);
+        audio.interactable = false;
+        resolutin.interactable = true;
+        commande.interactable = true;
         resolutionWindow.SetActive(false);
         commandeWindow.SetActive(false);
     }
@@ -43,6 +55,9 @@ public class ButtonsManager : MonoBehaviour
         audioWindow.SetActive(false);
         resolutionWindow.SetActive(true);
         commandeWindow.SetActive(false);
+        audio.interactable = true;
+        resolutin.interactable = false;
+        commande.interactable = true;
     }
 
     public void commandWindowActive()
@@ -50,6 +65,9 @@ public class ButtonsManager : MonoBehaviour
         audioWindow.SetActive(false);
         resolutionWindow.SetActive(false);
         commandeWindow.SetActive(true);
+        audio.interactable = true;
+        resolutin.interactable = true;
+        commande.interactable = false;
     }
 
     public void OptionsPanel()
@@ -66,8 +84,11 @@ public class ButtonsManager : MonoBehaviour
 
     public void immortel()
     {
-        if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftAlt))
+        /*if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftAlt))
             SceneManager.LoadScene("LevelInfinieImortal");
+
+        else if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.Space))*/
+            
     }
 
     public void setSensivityX(float sensitivity)
@@ -126,6 +147,7 @@ public class ButtonsManager : MonoBehaviour
     Resolution[] resolutions;
     void Start()
     {
+        audio.interactable = false;
         fullScreenToggle.isOn = Screen.fullScreen;
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();

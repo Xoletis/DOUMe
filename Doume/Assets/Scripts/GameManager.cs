@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int score;
 
+    public AudioClip openDoor;
+
     public string nameOfScoreScene;
     public string nameOfGameScene;
 

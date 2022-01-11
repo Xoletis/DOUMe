@@ -15,7 +15,7 @@ MonoBehaviour:
   health: 55
   damage: 3.77
   speed: 5
-  viewArea: 100
+  viewArea: 11
   attackRange: 6
   attackCouldown: 2
   natuarlSound: {fileID: 8300000, guid: 7a2a394de1a1dd14085a7bb3cfa16efc, type: 3}

@@ -50,6 +50,8 @@ public class PlayerInventory : MonoBehaviour
     private Vignette vg;
     public bool Invincible;
 
+    public bool canChange = true;
+
     public GameObject flammes;
 
     private void Awake()
@@ -82,6 +84,7 @@ public class PlayerInventory : MonoBehaviour
         if (stat.multiply == 0){
             stat.multiply = 1;
         }
+        LeftHealth();
     }
 
     void Update()
@@ -90,6 +93,13 @@ public class PlayerInventory : MonoBehaviour
         {
             SwitchWeapon();
         }
+
+        LeftHealth();
+    }
+
+    public void change()
+    {
+        canChange = !canChange;
     }
 
     void SwitchWeapon()
@@ -277,19 +287,19 @@ public class PlayerInventory : MonoBehaviour
         }
         if ((stat.health * 100) / stat.maxHealth <= 80)
         {
-            vg.intensity.value = 0.6f;
+            vg.intensity.value = 0.55f;
         }
         if ((stat.health * 100) / stat.maxHealth <= 60)
         {
-            vg.intensity.value = 0.7f;
+            vg.intensity.value = 0.6f;
         }
         if ((stat.health * 100) / stat.maxHealth <= 40)
         {
-            vg.intensity.value = 0.8f;
+            vg.intensity.value = 0.65f;
         }
         if ((stat.health * 100) / stat.maxHealth <= 20)
         {
-            vg.intensity.value = 0.9f;
+            vg.intensity.value = 0.7f;
         }
     }
 

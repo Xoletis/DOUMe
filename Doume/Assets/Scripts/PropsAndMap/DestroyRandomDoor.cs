@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class DestroyRandomDoor : MonoBehaviour
 {
     public int doorRandom;
@@ -10,10 +11,13 @@ public class DestroyRandomDoor : MonoBehaviour
     bool isDestroyed = false;
     public int ennemies = 0;
 
+    AudioSource source;
+
     void Start()
     {
         //Quelle porte sera suprimer
         doorRandom = Random.Range(0, doors.Count);
+        source = GetComponent<AudioSource>();
     }
     public void AddEnnemy()
     {
@@ -31,6 +35,8 @@ public class DestroyRandomDoor : MonoBehaviour
             ennemies = 0;
             if (isDestroyed == false)
             {
+                source.clip = GameManager.instance.openDoor;
+                source.Play();
                 doors[doorRandom].GetComponent<spawnNextRoom>().spawnNextEnnemy();
                 isDestroyed = !isDestroyed;
             }
