@@ -28,12 +28,14 @@ public class PlayerFPS : MonoBehaviour
     public float rotationSpeedY = 2.0f;
     public float rotationXLimit = 45.0f;
 
+    Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         //Cache le curseur de la souris
         characterController = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -109,8 +111,6 @@ public class PlayerFPS : MonoBehaviour
 
             //Applique le mouvement
             characterController.Move(moveDirection * Time.deltaTime);
-
-
 
             //Rotation de la caméra
 

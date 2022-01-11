@@ -1152,6 +1152,9 @@ MonoBehaviour:
   SensitivityY: {fileID: 215163495}
   fullScreenToggle: {fileID: 215163497}
   isMenu: 0
+  resolutin: {fileID: 0}
+  audio: {fileID: 0}
+  commande: {fileID: 0}
 --- !u!1 &138988533
 GameObject:
   m_ObjectHideFlags: 0
@@ -12310,7 +12313,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-10158
+  m_Name: pb_Mesh-228832
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15097,6 +15100,18 @@ PrefabInstance:
       propertyPath: weaponImage
       value: 
       objectReference: {fileID: 1961787534}
+    - target: {fileID: 1380864147705895574, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380864147705895574, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380864147705895574, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
+      propertyPath: m_MinMoveDistance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1380864147705895575, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
       propertyPath: v
       value: 
@@ -15145,6 +15160,14 @@ PrefabInstance:
       propertyPath: shotgunAmmoMaxText
       value: 
       objectReference: {fileID: 1490808996}
+    - target: {fileID: 1380864147705895578, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
+      propertyPath: runningSpeed
+      value: 11.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380864147705895578, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
+      propertyPath: walkingSpeed
+      value: 5.625
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2d59998c12b70642b9765b3eb969624, type: 3}
 --- !u!1001 &2833804450015362975
@@ -15283,6 +15306,10 @@ PrefabInstance:
     - target: {fileID: 5176147926421718714, guid: 4f8c18b850ef1f845a850c49d08847e8, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176147926421718714, guid: 4f8c18b850ef1f845a850c49d08847e8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5176147926421718718, guid: 4f8c18b850ef1f845a850c49d08847e8, type: 3}
       propertyPath: m_Pivot.x

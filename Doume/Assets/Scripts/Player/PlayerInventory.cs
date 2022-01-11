@@ -50,9 +50,9 @@ public class PlayerInventory : MonoBehaviour
     private Vignette vg;
     public bool Invincible;
 
-    public bool canChange = true;
-
     public GameObject flammes;
+
+    bool canChange = true;
 
     private void Awake()
     {
@@ -97,17 +97,23 @@ public class PlayerInventory : MonoBehaviour
         LeftHealth();
     }
 
-    public void change()
-    {
-        canChange = !canChange;
-    }
-
     void SwitchWeapon()
     {
-        i--;
-        if (i < 0) i = allWeapons.Length - 1;
-        weapon = allWeapons[i];
-        gunController.changeWeapon();
+        if (canChange)
+        {
+            i--;
+            if (i < 0) i = allWeapons.Length - 1;
+            weapon = allWeapons[i];
+            gunController.changeWeapon();
+            StartCoroutine(switchcouldown());
+        }
+    }
+
+    IEnumerator switchcouldown()
+    {
+        canChange = false;
+        yield return new WaitForSeconds(0.5f);
+        canChange = true;
     }
 
     // Le joueur perd des points de vie / d'armure
